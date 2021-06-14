@@ -8,8 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "nodemon",
+    "dev": "nodemon",
+    "prod": "NODE_ENV=production nodemon"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/reskillamericans/Wildfire-Group1.git/issues"
   },
-  "homepage": "https://github.com/reskillamericans/Wildfire-Group1.git#readme"
+  "homepage": "https://github.com/reskillamericans/Wildfire-Group1.git#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.13"
+  }
 }

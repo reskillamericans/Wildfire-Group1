@@ -35,7 +35,7 @@ if (process.argv[2] === '--import') {
 }
 
 //Importing Data
-// node src/seeds/faqSeeds --import
+// node src/seeders/faqSeeds --import
 
 //Deleteing
-// node src/seeds/faqSeeds --delete
+// node src/seederss/faqSeeds --delete

@@ -1,9 +1,44 @@
-const http = require('http');
+require('dotenv').config();
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
 
-const requestListener = function (req, res) {
-    res.writeHead(200);
-    res.end('Hello World!');
-}
+//Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-const server = http.createServer(requestListener);
-server.listen(process.env.PORT);
+//See console.log of whether you are in production or development mode
+console.log(process.env.NODE_ENV);
+
+//==================================================
+// DATABASE
+//==================================================
+const dbSetup = require('./database/setup');
+
+dbSetup();
+
+//==================================================
+// Routes
+//==================================================
+
+//Placeholder routes for webpages
+app.get('/', (req, res) => {
+  res.send('Wildfire Group-1 Landing page');
+});
+
+app.get('/contact-us', (req, res) => {
+  res.send('Contact Page!');
+});
+
+app.get('/faq', (req, res) => {
+  res.send('FAQ');
+});
+
+app.get('/about-us', (req, res) => {
+  res.send('About Us');
+});
+
+//Server
+app.listen(port, () => {
+  console.log(`Server is listening on port: ${port}`);
+});

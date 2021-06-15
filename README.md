@@ -21,7 +21,7 @@ Welcome!
 - Don't forget to 'npm install' after clonning the project!
 - Make sure to have a .env file with the follwing information
 
-  - DATABASE_LOCAL=mongodb://localhost:27017/wildfireApp
+  - DATABASE_URL=mongodb://localhost:27017/wildfireApp
   - NODE_ENV=development
 
 - Command lines to start the server

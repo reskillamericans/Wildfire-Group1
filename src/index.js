@@ -22,6 +22,7 @@ dbSetup();
 // Routes
 //==================================================
 
+// FETCH STORED FAQs
 app.get('/faqs', async (req, res) => {
   try {
     const faqs = await Faq.find({});

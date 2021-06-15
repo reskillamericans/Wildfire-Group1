@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Faq = require('../models/faq');
 const faqData = require('../data/faqData.json');
 
+//Database connection
 const dbSetup = require('../database/setup');
 
 dbSetup();

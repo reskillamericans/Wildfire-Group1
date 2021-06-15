@@ -11,7 +11,7 @@ Please always follow the right format before making pull request.
 
 * Work on your assigned page.
 
-* After working on your page, create an upstream on your local machine to pull the latest codes from the test branch of this repository `git remote add upstream https://github.com/reskillamericans/Medical-Aid-Group1-FE.git` 
+* After working on your page, create an upstream on your local machine to pull the latest codes from the test branch of this repository `git remote add upstream https://github.com/reskillamericans/Wildfire-Group1.git` 
 
 * And  REMEMBER TO PULL UPDATES - `git pull upstream test`
 

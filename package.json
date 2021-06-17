@@ -8,9 +8,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon",
-    "dev": "nodemon",
-    "prod": "NODE_ENV=production nodemon"
+    "start": "NODE_ENV=production npm run seedFaqs && nodemon src/index.js",
+    "seedFaqs": "npm run deleteFaqs && node src/seeders/faqSeeds --import",
+    "deleteFaqs": "node src/seeders/faqSeeds --delete",
+    "dev": "npm run seedFaqs && nodemon"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.13"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }

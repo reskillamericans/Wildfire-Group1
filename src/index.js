@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const faqRouter = require('./routes/faqRoutes');
+const subRouter = require('./routes/subscriberRoutes');
 const port = process.env.PORT || 3000;
 
 //Middleware
@@ -24,6 +25,9 @@ dbSetup();
 
 //FAQ Routes
 app.use('/faqs', faqRouter);
+
+//Subscriber routes!
+app.use('/subscribers', subRouter);
 
 //Placeholder routes for webpages
 app.get('/', (req, res) => {

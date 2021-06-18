@@ -35,7 +35,6 @@ exports.getFaq = async (req, res) => {
 
     res.status(200).json({
       status: 'success',
-      results: faq.length,
       data: {
         faq,
       },

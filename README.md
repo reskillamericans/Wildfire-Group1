@@ -11,7 +11,7 @@ Please always follow the right format before making pull request.
 
 * Work on your assigned page.
 
-* Add your image in the images folder.
+* Create a folder for your image(s) in the images folder .
 
 * After working on your page, create an upstream on your local machine to pull the latest codes from the test branch of this repository `git remote add upstream https://github.com/reskillamericans/Wildfire-Group1.git` 
 

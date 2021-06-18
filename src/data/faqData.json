@@ -1,0 +1,34 @@
+[
+  {
+    "question": "Where does the data come from?",
+    "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, minima."
+  },
+  {
+    "question": "How much does the application cost?",
+    "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, minima."
+  },
+  {
+    "question": "How current is your data",
+    "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, minima."
+  },
+  {
+    "question": "If I want to report a fire, what do I need to do?",
+    "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, minima."
+  },
+  {
+    "question": "How can I protect my home from wildfires?",
+    "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, minima."
+  },
+  {
+    "question": "What time of the year are wildfire hazards the highest?",
+    "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, minima."
+  },
+  {
+    "question": "How can I prepare for a wildfire",
+    "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, minima."
+  },
+  {
+    "question": "Will the website have the same functionality as the app?",
+    "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, minima."
+  }
+]

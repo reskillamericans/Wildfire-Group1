@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const faqRouter = require('./routes/faqRoutes');
+const Faq = require('./models/faq');
 const port = process.env.PORT || 3000;
 
 //Middleware
@@ -22,8 +22,26 @@ dbSetup();
 // Routes
 //==================================================
 
-//FAQ Routes
-app.use('/faqs', faqRouter);
+// FETCH STORED FAQs
+app.get('/faqs', async (req, res) => {
+  try {
+    const faqs = await Faq.find({});
+
+    res.status(200).json({
+      status: 'success',
+      results: faqs.length,
+      data: {
+        faqs,
+      },
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({
+      status: 'fail',
+      message: err,
+    });
+  }
+});
 
 //Placeholder routes for webpages
 app.get('/', (req, res) => {

@@ -1,5 +1,4 @@
 require('dotenv').config();
-const mongoose = require('mongoose');
 const Faq = require('../models/faq');
 const faqData = require('../data/faqData.json');
 
@@ -38,4 +37,4 @@ if (process.argv[2] === '--import') {
 // node src/seeders/faqSeeds --import
 
 //Deleteing
-// node src/seederss/faqSeeds --delete
+// node src/seeders/faqSeeds --delete

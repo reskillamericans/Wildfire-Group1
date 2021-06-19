@@ -70,6 +70,7 @@ Once you are done working on your feature, you may go on to https://github.com/r
 
 - Command lines to start the server
   - To start server in development mode: 'npm run dev'
-  - To start server in production mode: 'npm run prod'
+  - To start server in production mode: 'npm run start'
+  - To delete faqs "npm run deleteFaqs"
 
 All the best!

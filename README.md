@@ -75,8 +75,8 @@ Once you are done working on your feature, you may go on to https://github.com/r
 
 ## Send Email Function
 1. Require sendEmail from the services folder 
-2. sendEmail is an async function that will taken in an object of options. The options are (email, subject, message)
-3. Don't forget to add the mailtrap credentials to your .env file. An example can be seen in the .env.example file. 
+2. sendEmail is an async function that will take in an object of options. The options are (email, subject, message)
+3. Don't forget to add the mailtrap.io credentials to your .env file. An example can be seen in the .env.example file. 
 
 ### Example
 ```javascript

@@ -21,7 +21,7 @@ const nodemailer = require('nodemailer');
     if (err) {
       console.log(err);
     }
-    console.log('email sent to subscriber successfuly!');
+    console.log('email sent successfuly!');
   });
 };
 

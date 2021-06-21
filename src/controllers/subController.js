@@ -43,7 +43,7 @@ exports.createSub = async (req, res) => {
 
     //Notify admin of new subscriber
     await sendEmail({
-      email: 'wildfireadmin@gmail.com',
+      email: process.env.EMAIL_ADMIN,
       subject: 'A new subscriber has joined!',
       message: `${req.body.email} has joined as a new subscriber!`
     });

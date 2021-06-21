@@ -1,5 +1,5 @@
 const Subscriber = require('../models/subscriber');
-const {sendEmail, emailAdmin} = require('../services/sendEmail');
+const sendEmail = require('../services/sendEmail');
 
 //Get all subscribers
 exports.getAllSubs = async (req, res) => {
@@ -42,7 +42,7 @@ exports.createSub = async (req, res) => {
     });
 
     //Notify admin of new subscriber
-    await emailAdmin({
+    await sendEmail({
       email: 'wildfireadmin@gmail.com',
       subject: 'A new subscriber has joined!',
       message: `${req.body.email} has joined as a new subscriber!`

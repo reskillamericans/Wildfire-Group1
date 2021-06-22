@@ -1,29 +1,30 @@
-const Subscriber = require('../models/subscriber');
-const sendEmail = require('../services/sendEmail');
+const Subscriber = require("../models/subscriber");
+const sendEmail = require("../services/sendEmail");
+const AppError = require("../utils/appError");
 
 //Get all subscribers
-exports.getAllSubs = async (req, res) => {
+exports.getAllSubs = async (req, res, next) => {
   try {
     const subs = await Subscriber.find({});
 
+    if (subs.length === 0) {
+      return next(new AppError(404, "There are no subscribers found!"));
+    }
+
     res.status(200).json({
-      status: 'success',
+      status: "success",
       results: subs.length,
       data: {
         subs,
       },
     });
   } catch (err) {
-    console.log(err);
-    res.status(500).json({
-      status: 'fail',
-      message: err,
-    });
+    next(err);
   }
 };
 
 //Create Subscriber
-exports.createSub = async (req, res) => {
+exports.createSub = async (req, res, next) => {
   try {
     //Save subscriber email to the database
     const subscriber = await Subscriber.create({
@@ -31,32 +32,27 @@ exports.createSub = async (req, res) => {
     });
 
     //Email message
-    const message =
-      'You have successfully subscribed to our newsletter';
+    const message = "You have successfully subscribed to our newsletter";
 
     //Send email to newly created subscriber
     await sendEmail({
       email: req.body.email,
-      subject: 'Welcome to the Wildfire Subscription!',
+      subject: "Welcome to the Wildfire Subscription!",
       message,
     });
 
     //Notify admin of new subscriber
     await sendEmail({
       email: process.env.EMAIL_ADMIN,
-      subject: 'A new subscriber has joined!',
-      message: `${req.body.email} has joined as a new subscriber!`
+      subject: "A new subscriber has joined!",
+      message: `${req.body.email} has joined as a new subscriber!`,
     });
 
     res.status(200).json({
-      status: 'success',
-      message: 'Thank you for subscribing!',
+      status: "success",
+      message: "Thank you for subscribing!",
     });
   } catch (err) {
-    console.log(err);
-    res.status(500).json({
-      status: 'fail',
-      message: err,
-    });
+    next(err);
   }
 };

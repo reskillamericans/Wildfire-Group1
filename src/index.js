@@ -6,14 +6,14 @@ const subRouter = require("./routes/subscriberRoutes");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./middlewares/globalErrorHandler");
 const port = process.env.PORT || 3000;
-const {seedMember} = require('./seeders/members')
+const { seedMember } = require("./seeders/members");
 
 //Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //See console.log of whether you are in production or development mode
-//console.log(process.env);
+console.log(process.env.NODE_ENV);
 
 //==================================================
 // DATABASE

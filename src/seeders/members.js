@@ -1,11 +1,10 @@
 const Member = require('../models/team_members');
-let members = require('./members.json')
+let {members} = require('./members.json');
 exports.seedMember = () =>{
-Member.create(...members)  
-}, (err, member) => {
-    if(err) throw err
-    member.save((err, members) => {
+    Member.find({}, (err, member)=>{
         if(err) throw err
-        return "New team member page added."
-    })
-}
+if (member.length===0){
+    Member.create(...members, (err, newMember) => {
+    if(err) throw err
+   console.log("New member added.") })
+}})}

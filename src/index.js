@@ -4,13 +4,14 @@ const app = express();
 const faqRouter = require('./routes/faqRoutes');
 const subRouter = require('./routes/subscriberRoutes');
 const port = process.env.PORT || 3000;
+const {seedMember} = require('./seeders/members')
 
 //Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //See console.log of whether you are in production or development mode
-console.log(process.env.NODE_ENV);
+//console.log(process.env);
 
 //==================================================
 // DATABASE
@@ -19,6 +20,7 @@ const dbSetup = require('./database/setup');
 
 dbSetup();
 
+seedMember();
 //==================================================
 // Routes
 //==================================================

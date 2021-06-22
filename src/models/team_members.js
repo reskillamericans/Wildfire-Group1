@@ -11,7 +11,6 @@ const memberSchema = new mongoose.Schema({
     role: {
         type: String,
         required: true,
-        enum: ['Backend - Node.js', 'Design', 'Flutter', 'Frontend']
     },
     imageUrl: {
         type: String,

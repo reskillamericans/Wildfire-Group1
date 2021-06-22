@@ -7,10 +7,6 @@ exports.getAllSubs = async (req, res, next) => {
   try {
     const subs = await Subscriber.find({});
 
-    if (subs.length === 0) {
-      return next(new AppError(404, "There are no subscribers found!"));
-    }
-
     res.status(200).json({
       status: "success",
       results: subs.length,

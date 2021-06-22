@@ -4,7 +4,7 @@ const app = express();
 const faqRouter = require("./routes/faqRoutes");
 const subRouter = require("./routes/subscriberRoutes");
 const AppError = require("./utils/appError");
-const globalErrorHandler = require("./controllers/errorController");
+const globalErrorHandler = require("./middlewares/globalErrorHandler");
 const port = process.env.PORT || 3000;
 
 //Middleware
@@ -30,23 +30,6 @@ app.use("/faqs", faqRouter);
 
 //Subscriber routes!
 app.use("/subscribers", subRouter);
-
-//Placeholder routes for webpages
-app.get("/", (req, res) => {
-  res.send("Wildfire Group-1 Landing page");
-});
-
-app.get("/contact-us", (req, res) => {
-  res.send("Contact Page!");
-});
-
-app.get("/faq", (req, res) => {
-  res.send("FAQ");
-});
-
-app.get("/about-us", (req, res) => {
-  res.send("About Us");
-});
 
 //Unhandled Routes
 app.all("*", (req, res, next) => {

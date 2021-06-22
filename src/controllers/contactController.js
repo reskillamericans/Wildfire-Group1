@@ -1,6 +1,6 @@
 const Contact = require("../models/contact");
 
-exports.createContact = (req, res) => {
+exports.createContact = async (req, res) => {
   Contact.create(
     {
       ...req.body,
@@ -17,9 +17,9 @@ exports.createContact = (req, res) => {
             "Thank you for joining us! We promise to only send emails that are important to you regarding any new updates or features added to the application!";
 
           //Send email to newly created subscriber
-          sendEmail({
-            from: "reskillnodejs@gmail.com",
-            to: "admin@reskill.com",
+          await sendEmail({
+            from: process.env.EMAIL_FROM,
+            to: process.env.EMAIL_ADMIN,
             subject: "Wilfire Contact",
 
             html: `${req.body.name} contacted you. <br/> ${req.body}`,

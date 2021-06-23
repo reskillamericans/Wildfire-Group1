@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production npm run seedFaqs && nodemon src/index.js",
+    "start": "npm run seedFaqs && NODE_ENV=production nodemon src/index.js",
     "seedFaqs": "npm run deleteFaqs && node src/seeders/faqSeeds --import",
     "deleteFaqs": "node src/seeders/faqSeeds --delete",
     "dev": "npm run seedFaqs && nodemon"

@@ -8,6 +8,15 @@ const globalErrorHandler = require("./middlewares/globalErrorHandler");
 const port = process.env.PORT || 3000;
 const { seedMember } = require("./seeders/members");
 
+//Uncaught Exception Errors
+process.on("uncaughtException", (err) => {
+  console.log(
+    "There was an uncaught exception error. Server shutting down...",
+    err
+  );
+  process.exit(1);
+});
+
 //Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -42,6 +51,14 @@ app.all("*", (req, res, next) => {
 app.use(globalErrorHandler);
 
 //Server
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Server is listening on port: ${port}`);
+});
+
+//Unhandled Rejection Errors
+process.on("unhandledRejection", (err) => {
+  console.log("Unhandled Rejection Error! Server shutting down...", err);
+  server.close(() => {
+    process.exit(1);
+  });
 });

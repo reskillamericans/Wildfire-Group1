@@ -32,13 +32,20 @@ exports.createSub = async (req, res) => {
 
     //Email message
     const message =
-      'Thank you for joining us! We promise to only send emails that are important to you regarding any new updates or features added to the application!';
+      'You have successfully subscribed to our newsletter';
 
     //Send email to newly created subscriber
     await sendEmail({
       email: req.body.email,
       subject: 'Welcome to the Wildfire Subscription!',
       message,
+    });
+
+    //Notify admin of new subscriber
+    await sendEmail({
+      email: process.env.EMAIL_ADMIN,
+      subject: 'A new subscriber has joined!',
+      message: `${req.body.email} has joined as a new subscriber!`
     });
 
     res.status(200).json({

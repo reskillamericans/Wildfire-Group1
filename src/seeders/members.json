@@ -1,0 +1,104 @@
+{"members":
+    [{
+        "firstName": "Emmy",
+        "lastName": "Le",
+        "role": "Backend - Node.js",
+        "imageUrl": "www.pic.com"
+        
+},
+    {
+    "firstName": "Alex",
+    "lastName": "Maldonado",
+    "role": "Backend - Node.js",
+    "imageUrl": "www.pic.com"
+    
+
+    },
+    {
+        "firstName": "Destiny",
+        "lastName": "Aigbe",
+        "role": "Backend - Node.js",
+        "imageUrl": "www.pic.com"
+        
+    
+    },
+    {
+        "firstName": "Jennifer",
+        "lastName": "Berry",
+        "role": "Design",
+        "imageUrl": "www.pic.com"
+        
+},
+    {
+        "firstName": "Raphaela",
+        "lastName": "Han",
+        "role": "Design",
+        "imageUrl": "www.pic.com"
+        
+},
+    {
+        "firstName": "Kristina",
+        "lastName": "Kraft",
+        "role": "Frontend",
+        "imageUrl": "www.pic.com"
+        
+    
+    },
+    {
+        "firstName": "Lauren",
+        "lastName": "Smalls",
+        "role": "Frontend",
+        "imageUrl": "www.pic.com"
+        
+    
+    },
+    {
+        "firstName": "Danielle",
+        "lastName": "Prioleau",
+        "role": "Frontend",
+        "imageUrl": "www.pic.com"
+        
+    
+    },
+    {
+        "firstName": "Ethan",
+        "lastName": "Leonard",
+        "role": "Frontend",
+        "imageUrl": "www.pic.com"
+        
+    
+    },
+    {
+        "firstName": "Cecilia",
+        "lastName": "Ramirez",
+        "role": "Mobile - Flutter",
+        "imageUrl": "www.pic.com"
+        
+    
+    },
+    {
+        "firstName": "Mohan",
+        "lastName": "Kolamala",
+        "role": "Mobile - Flutter",
+        "imageUrl": "www.pic.com"
+        
+    
+    },
+    {
+        "firstName": "Doug",
+        "lastName": "Sturdivant",
+        "role": "Mobile - Flutter",
+        "imageUrl": "www.pic.com"
+        
+    
+    },
+    {
+        "firstName": "TK",
+        "lastName": "Green",
+        "role": "Mobile - Flutter",
+        "imageUrl": "www.pic.com"
+        
+    
+    }
+
+    ]}

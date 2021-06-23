@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*---------------color------------------------------------------*/ 
+:root{ 
+    --orange: #FF624C;
+    --light-gray: #C3C7D2;
+    --dark-gray: #7E7A8F;
+    --medium-gray:#EDEFF2;
+    --very-light-gray:#e5e5e5; 
+    --offwhite:#F9F9F9;
+    --white: #FFFFFF;
+
+}
+*{ 
+    padding:0; 
+    margin:0;
+    font-family:'open sans';
+}
+
+
+/*--------------header---------------------------------------------------*/ 
+header{ 
+    padding-top: .5em; 
+    padding-bottom: .5em; 
+    border-bottom:1px solid var(--very-light-gray);
+    background-color:var(--offwhite);
+}
+
+.navbar{ 
+    background-color: var(--light-gray);
+    
+    position: absolute;
+   
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
+}
+
+.fire-logo img{ 
+    width: 24px;
+    height: 43px;
+    display: inline-block;
+
+}
+
+.logo{ 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    line-height: 50px;
+    position: absolute;
+    text-transform: uppercase; 
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    /*changes makes the coloring for the fire tracker header*/
+    background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C);
+    background-size: 100%;
+        -webkit-background-clip: text; /*fix!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+
+}
+
+.language-dropdown {
+    display: block;
+   
+    margin-top: -30px;
+    margin-left: 50%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color:var(--light-gray);
+    float:right;
+}
+
+#language {
+    border: 1px solid var(--very-light-gray);
+    padding: 8px;
+    color: var(--dark-gray);
+    border-radius: 4px;
+    box-sizing: border-box;  
+}
+
+.headliners {
+    display: inline-block;
+    padding: 4px;
+    color: var(--light-gray);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    border-color: var(--very-light-gray);    
+    
+}
+
+.headliners a {
+    float: center;   
+    text-align: center;
+    padding: 4px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--very-light-gray);
+    width: 25%;   
+    font-weight:bold;
+}
+
+.headliners a:hover {
+    color: var(--orange);
+    
+}
+
+option {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*----------------top----------------------------------------*/ 
+.top{ 
+    background-color:var(--orange);
+    height:25em;
+    width:100%;
+}
+
+.top h1{ 
+    color:var(--white);
+    margin-bottom: 5em;
+    margin-top:3em;
+}
+
+.banner{ 
+    display: flex; 
+    margin: 0 13em;
+    width:800px;
+    align-items:flex-end;
+
+}
+
+
+small{ 
+    color:var(--white);
+    float:left; /*for wrapping*/
+    margin-top:15px;
+    
+} 
+
+.banner-left{ 
+    width: 450px;
+}
+
+
+.banner-left img{ /*all the logos*/
+    height:30px;
+    margin:5px;
+}
+
+.banner-left .cnn{ 
+    height:20px;
+    margin-bottom:10px;
+}
+
+.banner-right img{ 
+    width:13em;
+    padding-left:6em;
+ 
+}
+
+
+/*----------------bottom-------------*/ 
+.bottom{ 
+    margin-top:2em;
+    margin-bottom:4em;
+    
+}
+.story{ 
+    text-align:center;
+    width: 500px; /*need to fix*/
+    margin:0 auto;
+
+}
+
+.bottom h1{ 
+    margin-bottom:1em;
+}
+
+.bottom p, table{ 
+    color:var(--dark-gray)
+
+}
+
+.team-info{ 
+    display:flex;
+     margin:3em auto;
+     margin-top: 3em;
+    align-items:center;
+    justify-content:center;
+   
+}
+
+.team-info img{ 
+    height:20em;
+    padding-right:90px;
+}
+
+table{ 
+    background-color:var(--medium-gray);
+    border-radius: 77px;
+    padding: 3em;
+    width: 660px;
+}
+
+th{ 
+  padding-right:5em;
+  text-align:right;
+}
+
+td{ 
+    padding:10px;
+}
+
+.table-header{ 
+  
+    text-align:center;
+    padding-bottom:1em; /*remember you have to use padding since its a table*/
+    
+}
+
+/*----------------footer--------------------------------*/
+footer {
+    margin-bottom: -50px;
+   /* margin-top: 900px;*/
+    background-color: var(--offwhite);
+    padding: 10px;
+    border-top: 1px solid var(--light-gray);
+    background-color: var(--offwhite);
+    height: 100px;
+    width: 100%;
+    position: absolute;
+
+}
+
+.left-panel {
+    display: block;
+    margin-left:3em;
+   
+} 
+
+.subscribe {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-gray);
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    margin-top: 5px;
+}
+
+.subscribe-email {
+font-size: 16px;
+font-family: 'Open Sans', sans-serif;
+color: var(--dark-gray);
+font-weight: 400;
+margin-top: -30px; 
+
+}
+
+#subscribe-btn {
+    color: var(--white);
+    background-color: var(--orange);
+    display: block;
+    margin-top: -25px;
+    margin-left: 320px;
+    width: 20px;
+    width: 120px;
+    height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+}
+
+#newsletter-email{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--light-gray);
+    width: 13em;
+    color: var(--verylightgray);
+    font-weight: 400;
+    letter-spacing: -0.2px;  
+}
+
+.newsletter {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    margin-top: 5px;
+}
+
+.right-panel {
+    display: block;
+    margin-top: -180px; /*changed*/
+    float: right;
+    font-family: 'Open Sans', 'sans-serif';
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    color: var(--dark-gray);
+} 
+
+.social-icons {
+width: 50px;
+height: 50px;
+position: relative;   
+margin-top: 75px;
+display: flex;
+
+} 
+
+.facebook, .instagram, .twitter {
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    padding: 15px;
+    color: var(--white);
+    background-color: var(--orange);  
+    margin-right: 15px;
+}
+
+/*----------------------------568 media query---------------*/ 
+@media(max-width:568px){ 
+/*-------------------568 header------------*/
+header {
+    display: block;
+    align-items: center;
+    font-size: px;
+    width: 100%;    
+}
+
+
+
+/*-------------------568 top------------*/ 
+.top h1{ 
+    margin-top:1em;
+   
+}
+
+
+.banner{ 
+    flex-direction:column;
+    align-items:center;
+    margin:0 auto;
+    width:450px;
+    font-size:12px;
+   
+    
+}
+
+.banner-left{ 
+    position:relative;
+}
+
+.networks{ 
+    position:absolute; 
+    top:200px;
+}
+
+.banner-right{ 
+    position:relative;
+}
+
+.banner-right img{ 
+   
+   padding:1em;
+   position:absolute; 
+    left:10px;
+   top:-50px;
+   
+ }
+/*-------------------568 bottom------------*/ 
+.story{ 
+    width:300px;
+    font-size:12px;
+    
+}
+
+.team-info{ 
+    flex-direction:column;
+    margin-top:5px;
+   
+}
+
+.team-info img{ 
+    padding:10px;
+    height:1em;
+}
+
+table{ 
+    width: 300px;
+    padding:1em;
+    font-size:12px;
+}
+
+th{ 
+    padding-right:10px;
+}
+
+.table-header{ 
+    padding-bottom:5px;
+}
+
+/*-------------------568 footer------------*/
+footer {
+        display: block;
+        overflow: hidden;
+           
+    }
+
+    .left-panel {
+        display: block;
+        font-size: 12px;
+        font-family: 'Open Sans', sans-serif;
+        margin: 25px;
+    }
+
+    .newsletter {
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #subscribe-btn {
+        margin-left: 125px;
+    }
+
+    .right-panel {
+        width: 70%;
+        margin-right: -150px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}
+
+/*----------------------------768 media query-------------------------*/ 
+@media(max-width:768px){ 
+/*-------------------768 header-------------------*/ 
+header {
+    display: block;
+    align-items: center;
+    font-size: px;
+    width: 100%;    
+}
+
+/*-------------------768 top-------------------*/
+.top{ 
+    height:20em;
+}
+
+.top h1{ 
+    margin-bottom:1em;
+}
+
+
+.banner{ 
+    
+    align-items:center;
+    margin:0 auto;
+    width:600px;
+    
+   
+    
+}
+
+.banner-right img{ 
+    width:7em;
+   padding:1em;
+ }
+/*-------------------768 bottom-------------------*/
+.story{ 
+    width:380px;
+    
+    margin-bottom:2em;
+    
+}
+
+.team-info{ 
+    
+    margin-top:5px;
+   
+}
+
+.team-info img{ 
+    padding:10px;
+    height:12em;
+}
+
+table{ 
+    width: 400px;
+    padding:1em;
+    
+    margin-left:1em;
+}
+
+th{ 
+    padding-right:10px;
+}
+
+.table-header{ 
+    padding-bottom:5px;
+}
+
+/*-------------------768 footer-------------------*/
+footer {
+    display: block;
+    overflow: hidden;
+       
+}
+
+.left-panel {
+    display: block;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 25px;
+}
+
+.newsletter {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#subscribe-btn {
+    margin-left: 125px;
+}
+
+.right-panel {
+    width: 70%;
+    margin-right: -150px;
+    display: flex;
+    flex-direction: column;
+
+}
+}
+

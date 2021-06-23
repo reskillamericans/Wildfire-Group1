@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --offwhite: #f9f9f9;
+    --white: #ffffff; 
+    --black: #180126;
+    --gray: #7e7a8f;
+    --lightgray: #cec7d2;
+    --verylightgray:#e5e5e5;
+    --orange: #ff624d;
+    --green: #089285;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    height: 100vh;
+    max-width: 1440px;
+    background-color: var(--white);
+    position: relative;
+
+}
+
+header {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border-bottom: 1px solid var(--verylightgray);
+    background-color: var(--offwhite);
+    
+}
+
+.navbar {
+    background-color: var(--lightgray);
+    border: 5px solid var(--gray);
+    
+    width: 1600px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+}
+
+img {
+    width: 24px;
+    height: 43px;
+    display: inline-block;
+    background-image: url(fire-transparent-clipart-24.png);
+}
+
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    line-height: 50px;
+    position: absolute;
+    text-transform: uppercase; 
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C);
+    background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+
+}
+
+.language-dropdown {
+    display: block;
+    flex-direction: right;
+    margin-top: -30px;
+    margin-left: 50%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: var(--verylightgray);
+}
+
+#language {
+    border: 1px solid var(--verylightgray);
+    padding: 8px;
+    color: var(--gray);
+    border-radius: 4px;
+    box-sizing: border-box;  
+}
+
+.headliners {
+    display: inline-block;
+    padding: 4px;
+    color: var(--gray);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    border-color: var(--verylightgray);    
+}
+
+.headliners {
+    overflow: hidden;
+}
+
+.headliners a {
+    float: center;   
+    text-align: center;
+    padding: 4px 6px;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--verylightgray);
+    width: 25%;   
+}
+
+.headliners a:hover {
+    color: var(--orange); 
+}
+
+.container { 
+    line-height: 30px;
+    position: absolute;
+    font-style: normal;
+    letter-spacing: 0.01em;
+    width: 750px;
+    height: 50px;
+    left: 300px;
+    top: 142px;
+}
+
+fieldset {
+    border: none;
+}
+
+.main-header {
+    font-size: 37px;
+    color: var(--black);
+    font-family: 'Open Sans', sans-serif;  
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid var(--verylightgray);
+    border-radius: 4px;
+}
+
+#name-label, #email-label, #number-label, #subject-label, #message-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 17.7px;
+    font-weight: bold;
+    letter-spacing: 0.07em;
+    color: #180126;
+
+}
+
+#dropdown {
+    width: 100%;
+    height: 30px;
+    border: 1px solid var(--verylightgray);
+    border-radius: 4px;
+    color: var(--gray);
+}
+
+option {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.subheading {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    size: 13px;
+    color: var(--gray);
+    display: block;
+    margin-top: -5px;
+    letter-spacing: -0.2px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid var(--verylightgray);
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+}
+
+#submit-btn {
+    background-color: var(--orange);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    float: right;
+    border-radius: 4px;
+    position: relative;
+    width: 343px;
+    height: 40px; 
+    border: none;
+    margin-top: -100px;
+}
+
+footer {
+    margin-bottom: -55px;
+    margin-top: 900px;
+    background-color: var(--offwhite);
+    padding: 10px;
+    border-top: 1px solid var(--verylightgray);
+    background-color: var(--offwhite);
+    height: 100px;
+    width: 100%;
+    
+}
+
+.left-panel {
+    display: block;
+}
+
+.subscribe {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--gray);
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    margin-top: 5px;
+}
+
+.subscribe-email {
+font-size: 16px;
+font-family: 'Open Sans', sans-serif;
+color: var(--gray);
+font-weight: 400;
+margin-top: -30px;
+}
+
+#subscribe-btn {
+    color: var(--white);
+    background-color: var(--orange);
+    display: block;
+    margin-top: -25px;
+    margin-left: 320px;
+    width: 20px;
+    width: 120px;
+    height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+}
+
+#newsletter-email{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--gray);
+    background-color: var(--offwhite);
+    width: 25%;
+    color: var(--verylightgray);
+    font-weight: 400;
+    letter-spacing: -0.2px;  
+}
+
+.newsletter {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    margin-top: 5px;
+}
+
+.right-panel {
+    display: block;
+    margin-top: -220px;
+    float: right;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: -0.2px;
+    color: var(--gray);
+}
+
+.social-icons {
+width: 100%;
+height: 50px;
+position: relative;   
+margin-top: 90px;
+display: flex;
+
+}
+
+.facebook, .instagram, .twitter {
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    padding: 15px;
+    color: var(--white);
+    background-color: var(--orange);  
+    margin-right: 15px;
+    letter-spacing: -0.2px;
+}
+
+.social-icons a:hover {
+    background-color: var(--green);
+    border: 2px solid var(--green);
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: block;
+        align-items: center;
+        font-size: px;
+        width: 100%;    
+    }
+
+    .container {
+       display: block;
+       font: 40px;
+       margin-left: -250px;
+    }
+
+    input {
+        width: 50%; 
+    }
+
+    #dropdown, #message-label {
+        width: 50%;
+    }
+
+    #submit-btn {
+        display: block;
+
+    }
+
+    footer {
+        display: block;
+        overflow: hidden;
+           
+    }
+
+    .left-panel {
+        display: block;
+        font-size: 12px;
+        font-family: 'Open Sans', sans-serif;
+        margin: 25px;
+    }
+
+    .newsletter {
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #subscribe-btn {
+        margin-left: 125px;
+    }
+
+    .right-panel {
+        width: 70%;
+        margin-right: -150px;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+@media screen and (max-width: 568px) {
+    header {
+        display: block;
+        align-items: center;
+        font-size: px;
+        width: 100%;    
+    }
+
+    .container {
+       display: block;
+       font: 40px;
+       margin-left: -250px;
+    }
+
+    input {
+        width: 50%; 
+    }
+
+    #dropdown, #message-label {
+        width: 50%;
+    }
+
+    #submit-btn {
+        display: block;
+
+    }
+
+    footer {
+        display: block;
+        overflow: hidden;
+           
+    }
+
+    .left-panel {
+        display: block;
+        font-size: 12px;
+        font-family: 'Open Sans', sans-serif;
+        margin: 25px;
+    }
+
+    .newsletter {
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #subscribe-btn {
+        margin-left: 125px;
+    }
+
+    .right-panel {
+        width: 70%;
+        margin-right: -150px;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+

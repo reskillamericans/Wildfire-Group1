@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, intital-scale=1.0">
+        <link rel="stylesheet" href="contact.css">
+        <script src="https://kit.fontawesome.com/539f78907e.js" crossorigin="anonymous"></script>
+
+        <title>Contact Us</title>
+</head>
+ <header>
+       <div class="navbar>">
+           <div class="fire-logo"></div>
+               <img src="images/contactpage-images/fire-transparent-clipart-24.png">
+               <h3 class="logo"> Fire Tracker</h3>
+               <br>
+        <div class="language-dropdown">
+          <select id="language" required>
+                <option placeholder="Select your language">Select Language</option>
+                <option>English</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>Arabic</option>
+                <option>Chinese</option>
+            </select>
+            <div class="headliners">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        </div>    
+ </header>
+
+<body>
+        <div class="container">
+          <h1 class="main-header">Contact Us</h1>
+          <form id="contact_info" action="" method="post">
+            <fieldset>
+              <label for="name" id="name-label">Full Name</label>
+              <br>
+              <input type="text" id="your-name" placeholder="Enter your name" autocomplete="off" required/>
+            </fieldset>
+            <fieldset>
+              <label for="email" id="email-label">Email Address</label>
+              <br>
+              <input type="text" id="your-email" placeholder="Enter your email" autocomplete="off" required/>
+            </fieldset>
+            <fieldset>
+              <label for="number" id="number-label">Phone Number (Optional)</label>
+              <br>
+              <input type="tel" id="your-number" placeholder="Enter your phone number" autocomplete="off">
+            </fieldset>
+            <fieldset>
+              <label for="subject" id="subject-label">Subject</label> 
+              <br>
+              <select id="dropdown">
+                <option>Choose a topic</option>
+                <option>Customer Service</option>
+                <option>Technical Support</option>
+                <option>Complaints/Concerns</option>
+                <option>Other (please specify in message box)</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <label for="message" id="message-label">Message</label>
+              <p class="subheading">max 1000 characters</p>
+              <textarea id="message-label" name="message" placeholder="Tell us more.." autocomplete="off" required></textarea>
+              <br>
+              <br> 
+              <br>
+              <br>
+              <br>
+              <div class="submit-button">
+              <button id="submit-btn" type="submit">Submit</button>
+                </fieldset>
+              <br>
+              <br> 
+              <br> 
+          </form> 
+        </div>
+        <footer>
+            <div class="left-panel">
+                <h3 class="subscribe">Subscribe</h3>
+                <br>
+                <div class="subscribe-email">
+                    <input type="text" id="newsletter-email" placeholder="Email Address" autocapitalize="off">
+                    <div class="subscribe-btn">
+                    <button id="subscribe-btn" type="submit">Subscribe</button>
+                    </div>
+                    <p class="newsletter">I would like receive communications about Fire Tracker app services.</p>
+                </div>
+                <div class="right-panel">
+                    <div class="social-icons">
+                        <a class="facebook" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a class="instagram" href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a class="twitter" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                    </div>
+                
+                    <div class="fire-contact">
+                        <p class="fire-number">Phone:1.800.123.4567 | Email: contact@firetracker.com</p>
+                        <p class="privacy-info">Privacy. Terms . &copy; Copyright 2021 Reskill</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
+
+

@@ -11,10 +11,6 @@ const subscriberSchema = new mongoose.Schema(
       unique: true,
       validate: [validator.isEmail, "Please provide a valid email"],
     },
-    pass: {
-      type: String,
-      required: [true, "Subscriber must have a password!"],
-    },
   },
   { timestamps: true }
 );

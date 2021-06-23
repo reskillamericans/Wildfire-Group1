@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  font-family: 'Open Sans';
+}
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+  background: #fff;
+  color: #4d5974;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 80rem;
+}
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: black;
+  padding: 1.3rem;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 2rem; 
+}
+
+h3 {
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+
+h3 span {
+    font-size: 1rem;
+}
+
+/* search box */
+
+.search-box {
+    padding: 1rem;
+    margin-right: 6rem;
+    margin-left: 6rem;    
+    padding-bottom: 0;
+    padding-top: 0;
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    
+}
+  
+.search-field {
+    width: 100%;
+    padding: 10px 35px 10px 15px;
+    background: #FFFFFF;
+    border: 1px solid #C3C7D2    ;
+    box-sizing: border-box;
+    border-radius: 20px;
+    outline: none;
+    
+}
+
+input:placeholder-shown {
+    font-style: italic;
+    color: #C3C7D2;
+ }
+  
+.search-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: -33px;
+}
+  
+.search-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    opacity: 35%;
+}
+
+/* accordian */
+
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: 1px solid #C3C7D2;
+  background-color: #F9F9F9;
+  border-bottom: none;
+}
+
+.border {
+    border-bottom: 1px solid #C3C7D2;
+}
+
+
+
+
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #FF624D;
+}
+
+}
+.accordion a.active {
+  color: #FF624D;
+ 
+}
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: black;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  
+  
+}
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  color: black;
+  
+}
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  max-height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+  font-size: .9rem;
+}
+.accordion .content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}

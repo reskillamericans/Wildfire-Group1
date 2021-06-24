@@ -22,6 +22,98 @@ body {
   display: flex;
   min-height: 100vh;
 }
+
+/* navbar */
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #F9F9F9;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    border-bottom: 1px solid #C3C7D2;
+    z-index: 5;
+
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    
+    display: block;
+    color: #7288a2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: inline-flex;
+    margin-right: 2.5rem;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.active {
+    color: #FF624D !important;
+}
+
+  .float-right {
+    float: right;
+    
+  }
+
+  li {
+    display: inline
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    color: rgb(121, 113, 113);
+  }
+  
+.navbar-brand img {
+    display: inline-block;
+    height: 3rem;
+    margin-left: 2rem;
+    
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    padding-top: .5rem;
+    margin-left: .5rem;
+    text-transform: uppercase;
+    /* background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C); */
+    font-size: 1.8rem;
+    background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C);
+    background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+}
+
+.dropdown {
+    box-sizing: border-box;
+
+    margin-right: 3.5rem;
+    font: 'Open Sans';
+}
+
+#language {
+    color: #7E7A8F;
+    border: 1px solid #C3C7D2;
+    padding: .5rem;
+    font-size: .75rem;
+    border-radius: 4px;
+    outline: none;
+    
+}
+
+  /* Main content */
+  .main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }
 .container {
   margin: 0 auto;
   padding: 4rem;
@@ -35,6 +127,7 @@ h2 {
   margin: 0;
   text-align: center;
   margin-bottom: 2rem; 
+  margin-top: 3.5rem;
 }
 
 h3 {
@@ -73,6 +166,7 @@ h3 span {
     border-radius: 20px;
     outline: none;
     
+    
 }
 
 input:placeholder-shown {
@@ -85,6 +179,7 @@ input:placeholder-shown {
     border: none;
     outline: none;
     margin-left: -33px;
+    
 }
   
 .search-button img {
@@ -92,6 +187,8 @@ input:placeholder-shown {
     height: 20px;
     object-fit: cover;
     opacity: 35%;
+    cursor: pointer;
+    
 }
 
 /* accordian */
@@ -107,7 +204,6 @@ input:placeholder-shown {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 100%;
   padding: 1rem 3rem 1rem 1rem;
   color: #7288a2;
   font-size: 1.15rem;
@@ -123,16 +219,15 @@ input:placeholder-shown {
 
 
 
-
 .accordion a:hover,
 .accordion a:hover::after {
   cursor: pointer;
-  color: #FF624D;
+  color: #FF624D !important;
 }
 
-}
+
 .accordion a.active {
-  color: #FF624D;
+  color: #FF624D !important;
  
 }
 .accordion a::after {
@@ -153,7 +248,7 @@ input:placeholder-shown {
 .accordion a.active::after {
   font-family: 'Ionicons';
   content: '\f209';
-  color: black;
+  color:  #FF624D;
   
 }
 .accordion .content {
@@ -182,4 +277,103 @@ input:placeholder-shown {
   -webkit-transition: all 0.35s ease 0.15s;
   -o-transition: all 0.35s ease 0.15s;
   transition: all 0.35s ease 0.15s;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1068px) {
+    .float-right {
+        float: none; 
+      }
+    
+    h2 {
+        margin-top: 6rem;
+    }
+
+    .navbar-nav {
+        margin-right: 2rem;
+        margin-top: 0;
+    }
+
+    .dropdown {
+        margin-left: .7rem;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 878px) {
+     
+    .navbar a { 
+        
+        margin: 0;
+
+    }
+
+    .dropdown {
+        margin-right: .5rem;
+    }
+
+    
+    .search-box {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 564px) {
+    .search-box {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .dropdown {
+        margin-right: 0;
+    }
+
+    .navbar-nav {
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .navbar a { 
+        padding: .3rem;
+
+    }
+
+    .navbar-brand img {
+        
+        margin-left: .5rem;
+        
+    }
+
+    
+
+    h2 {
+        margin-top: 2.5rem;
+        margin-bottom: 0rem;
+    }
+
+    .container {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+    
+@media only screen and (max-width: 470px) {
+
+    .search-box {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    h3 {
+        padding-bottom: 0;
+    }
+
+        
+
+    }
+
 }

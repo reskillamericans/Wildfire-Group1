@@ -4,34 +4,47 @@
         <meta name="viewport" content="width-device-width, intital-scale=1.0">
         <link rel="stylesheet" href="contact.css">
         <script src="https://kit.fontawesome.com/539f78907e.js" crossorigin="anonymous"></script>
-
+        <link rel="shortcut icon" type="fire-icon" href="images/contactpage-images/firefav.png">
         <title>Contact Us</title>
 </head>
- <header>
-       <div class="navbar>">
-           <div class="fire-logo"></div>
-               <img src="images/contactpage-images/fire-transparent-clipart-24.png">
-               <h3 class="logo"> Fire Tracker</h3>
-               <br>
-        <div class="language-dropdown">
-          <select id="language" required>
-                <option placeholder="Select your language">Select Language</option>
-                <option>English</option>
-                <option>Spanish</option>
-                <option>French</option>
-                <option>Arabic</option>
-                <option>Chinese</option>
-            </select>
-            <div class="headliners">
-            <a class="active" href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact Us</a>
-        </div>
-        </div>    
- </header>
-
 <body>
+  <!-----new header-->
+  <div class="header">
+    <div class="navbar">
+      <a class="navbar-brand" href="#">
+        <!--inline block align top left-->
+        <img src="images/contactpage-images/fire-transparent-clipart-24.png" alt="">
+        <h2 class="logo">Fire Tracker</h2>
+      </a>
+      <div menu-right class="float-right">
+        <ul class="navbar-nav">
+          <li class="dropdown">
+            <select id="language" required>
+              <option placeholder="Select your language">Select Language</option>
+              <option>English</option>
+              <option>Spanish</option>
+              <option>French</option>
+              <option>Arabic</option>
+              <option>Chinese</option>
+            </select>
+          </li>
+          <li>
+            <a class="nonactive" href="#home">Home</a>
+          </li>
+          <li>
+            <a class="nonactive" href="#about">About</a>
+          </li>
+          <li>
+            <a  class="nonactive" href="#faq">FAQ</a>
+          </li>
+          <li>
+            <a class="active" href="#contactus">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!---contact form-->
         <div class="container">
           <h1 class="main-header">Contact Us</h1>
           <form id="contact_info" action="" method="post">
@@ -78,33 +91,31 @@
               <br> 
           </form> 
         </div>
+        <!---updated footer-->
         <footer>
+          <div class="footer-container">
             <div class="left-panel">
-                <h3 class="subscribe">Subscribe</h3>
-                <br>
-                <div class="subscribe-email">
-                    <input type="text" id="newsletter-email" placeholder="Email Address" autocapitalize="off">
-                    <div class="subscribe-btn">
-                    <button id="subscribe-btn" type="submit">Subscribe</button>
-                    </div>
-                    <p class="newsletter">I would like receive communications about Fire Tracker app services.</p>
-                </div>
-                <div class="right-panel">
-                    <div class="social-icons">
-                        <a class="facebook" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                        <a class="instagram" href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
-                        <a class="twitter" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-                    </div>
-                
-                    <div class="fire-contact">
-                        <p class="fire-number">Phone:1.800.123.4567 | Email: contact@firetracker.com</p>
-                        <p class="privacy-info">Privacy. Terms . &copy; Copyright 2021 Reskill</p>
-                    </div>
-                </div>
+              <h5 class="subscribe">Subscribe</h5>
+            
+              <div class="subscribe-email">
+                <input class="email-border" type="text" id="newsletter-email" placeholder="Email Address" autocapitalize="off">
+                <button id="subscribe-btn" type="submit">Subscribe</button>
+                <p class="newsletter">I would like to receive communcations about Fire Tracker app services.</p>
+              </div>
+            </div>
+            <div class="right-panel">
+              <div class="social-icons">
+                <a class="facebook" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a class="instagram" href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a class="twitter" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+              </div>
+              <div class="fire-contact">
+                <p class="fire-number">Phone: 1.800.123.4567 | Email: contact@firetracker.com</p>
+                <p class="privacy-info">Privacy. Terms. &copy; Copyright 2021 Reskill</p>
+              </div>
             </div>
         </footer>
 </body>
-
 </html>
 
 

@@ -20,7 +20,10 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   min-height: 100vh;
+  
+  /* min-height: 100vh; */
 }
 
 /* navbar */
@@ -83,7 +86,6 @@ body {
     padding-top: .5rem;
     margin-left: .5rem;
     text-transform: uppercase;
-    /* background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C); */
     font-size: 1.8rem;
     background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C);
     background-size: 100%;
@@ -193,6 +195,10 @@ input:placeholder-shown {
 
 /* accordian */
 
+.accordion {
+    margin-bottom: 1.5rem;
+}
+
 .accordion a {
   position: relative;
   display: -webkit-box;
@@ -278,6 +284,84 @@ input:placeholder-shown {
   -o-transition: all 0.35s ease 0.15s;
   transition: all 0.35s ease 0.15s;
 }
+
+/*----------------footer--------------*/
+.last-section {
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    background-color: #F9F9F9;
+}
+
+.footer-container{ 
+    display:flex;
+    justify-content:center;
+    padding:1em;
+    background-color: #F9F9F9;
+
+}
+
+.newsletter,.subscribe{ 
+    color:#7E7A8F;
+}
+
+#newsletter-email{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #7E7A8F;
+    background-color: #F9F9F9;
+    width: 25%;
+    color: #e5e5e5;
+    letter-spacing: -0.2px;  
+}
+
+
+button{ 
+    background-color:#FF624C;
+    border:none; 
+    border-radius:5px; 
+    color:#fff;
+    padding:5px; 
+    width:120px;
+    margin:5px;
+}
+
+.right-panel{ 
+    margin-top:2em;
+    padding-left:15px;
+}
+
+.right-panel p{ 
+    text-align:right;
+    color:#7E7A8F;;
+}
+
+.social-icons{ 
+    padding-bottom:10px;
+    display:flex;
+    justify-content:flex-end;
+    
+}
+
+.social-icons a{ 
+    background-color:#FF624C;
+    padding:10px;
+    border-radius:50%;
+    color:white;
+    margin-right: 5px;
+    vertical-align: center;
+    text-align: center;
+    width: 42px;
+    height: 42px;
+    font-family: 'FontAwesome' !important;
+    
+}
+
+
 
 /* media queries */
 
@@ -372,8 +456,31 @@ input:placeholder-shown {
         padding-bottom: 0;
     }
 
+}
+
         
+@media only screen and (max-width: 375px) {
+    #language {
+    padding: .2rem; }
+
+    .navbar a { 
+        padding: .2rem;
 
     }
 
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h3 span {
+        font-size: .8rem;
+    }
+
+
 }
+    
+

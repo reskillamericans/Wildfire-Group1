@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*---------------color----------------*/ 
+:root{ 
+    --orange: #FF624C;
+    --light-gray: #C3C7D2;
+    --dark-gray: #7E7A8F;
+    --medium-gray:#EDEFF2;
+    --very-light-gray:#e5e5e5; 
+    --offwhite:#F9F9F9;
+    --white: #FFFFFF;
+    --green: #089285;
+    --blue:#7288a2;
+}
+*{ 
+    padding:0; 
+    margin:0;
+    font-family:'open sans';
+}
+
+
+/*--------------header---------------*/ 
+/* navbar */
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color:var(--offwhite);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    border-bottom: 1px solid var(--light-gray);
+    z-index: 5;
+
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    
+    display: block;
+    color: var(--blue);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: inline-flex;
+    margin-right: 2.5rem;
+    font-weight: 700;
+    font-size: .9rem;
+    justify-content: center;
+}
+
+.active {
+    color: var(--orange) !important;
+}
+
+  .float-right {
+    float: right;
+    
+  }
+
+  li {
+    display: inline
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    color: rgb(121, 113, 113);
+  }
+  
+.navbar-brand img {
+    display: inline-block;
+    height: 3rem;
+    margin-left: 2rem;
+    
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    padding-top: .5rem;
+    margin-left: .5rem;
+    text-transform: uppercase;
+    /* background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C); */
+    font-size: 1.8rem;
+    background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C);
+    background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+}
+
+.dropdown {
+    box-sizing: border-box;
+
+    margin-right: 3.5rem;
+    font: 'Open Sans';
+}
+
+#language {
+    color: var(--dark-gray);
+    border: 1px solid var(--light-gray);
+    padding: .5rem;
+    font-size: .75rem;
+    border-radius: 4px;
+    outline: none;
+    
+}
+
+/*--------top---------------*/ 
+.top{ 
+    background-color:var(--orange);
+    margin-top:5em;
+    
+}
+
+.top h1{ 
+    margin-bottom:3em;
+    color:var(--white);
+}
+
+.banner{ 
+    display:flex;
+    padding:2em;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+.network-credit{ 
+    color:var(--white);
+    float:left; /*for wrapping*/               
+    margin-top:15px;
+} 
+
+.banner-left img{ 
+    height:30px;
+    padding:5px;
+
+}
+
+.networks{ 
+    display:inline;
+}
+
+
+.banner-right img{ 
+    padding-left:5em;
+    max-width:200px; 
+    height: auto;
+    width:100%;
+    margin-top:1em;
+    
+}
+
+.story{ 
+    max-width:500px;
+    text-align:center;
+    margin:0 auto;
+    padding:2em;
+}  
+
+.story h1{ 
+    margin-bottom:1em; 
+}
+
+.story p{ 
+    color:var(--dark-gray);
+}
+
+.team-info{ 
+    display:flex;
+   justify-content:center;
+   justify-items:center;
+   padding:1em;
+    
+}
+
+.team-info img{ 
+    max-width:400px;
+    padding-right:2em;
+}
+
+table{ 
+    background-color:var(--medium-gray);
+    border-radius: 77px;
+    padding: 2em;
+    max-width: 660px;
+    max-height:600px;
+}
+
+th{ 
+  padding-right:5em;
+  text-align:right;
+}
+
+td{ 
+    padding:10px;
+}
+
+.table-header{ 
+  
+    text-align:center;
+    padding-bottom:1em; /*remember you have to use padding since its a table*/  
+    
+} 
+/*----------------footer--------------*/
+footer{ 
+    background-color:var(--offwhite);
+}
+
+.footer-container{ 
+    display:flex;
+    justify-content:center;
+    padding:1em;
+}
+
+.newsletter,.subscribe{ 
+    color:var(--dark-gray);
+}
+
+#newsletter-email{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--dark-gray);
+    background-color: var(--offwhite);
+    width: 25%;
+    color: var(--very-light-gray);
+    letter-spacing: -0.2px;  
+}
+
+
+button{ 
+    background-color:var(--orange);
+    border:none; 
+    border-radius:5px; 
+    color:var(--white);
+    padding:5px; 
+    width:120px;
+    margin:5px;
+}
+
+.right-panel{ 
+    margin-top:2em;
+    padding-left:15px;
+}
+
+.right-panel p{ 
+    text-align:right;
+    color:var(--dark-gray);
+}
+
+.social-icons{ 
+    padding-bottom:10px;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.social-icons a{ 
+    background-color:var(--orange);
+    padding:10px;
+    border-radius:50%;
+    color:white;
+    margin-right:5px;
+}
+
+
+/*-----------------media queries--------------*/ 
+
+
+@media(max-width:768px){ 
+
+.float-right {
+    float: none;
+}
+
+.navbar a { 
+    margin: 0;
+}
+
+.dropdown {
+    margin-right: .5rem;
+}
+
+
+.network-credit{ 
+    float:none;
+} 
+
+.networks{ 
+    display:block; 
+} 
+
+
+.team-info{ 
+    flex-direction: column;
+    align-items:center;
+    padding:0;
+} 
+
+.team-info img{ 
+    padding-bottom: 1em;
+} 
+
+}
+
+@media(max-width:678px){ 
+   
+.dropdown {
+    margin-right: 0;
+}
+
+.navbar-nav {
+    margin-right: 0;
+    padding: 0;
+}
+
+.navbar a { 
+    padding: .3rem;
+
+}
+
+.navbar-brand img {
+    margin-left: .5rem;
+}
+
+h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 0rem;
+}  
+    
+.top h1{ 
+    margin-bottom:1.5em;
+    font-size: 20px;
+}
+
+.banner{ 
+    flex-direction:column;
+    align-items:center;
+    
+}
+
+.banner-left img{ 
+    height:28px;
+}
+
+.banner-right img{ 
+    max-width:160px;
+    padding-left:2em;
+    margin-top:10px;
+} 
+
+.footer-container{ 
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.footer-container p{ 
+    font-size:12px;
+}
+
+.subscribe{ 
+    font-size:20px;
+}
+
+.social-icons{ 
+    justify-content:center;
+}
+
+.right-panel p{ 
+    text-align:center;
+}
+
+}

@@ -13,35 +13,39 @@
     --green: #089285;
     --blue:#7288a2;
 }
-*{ 
-    padding:0; 
-    margin:0;
-    font-family:'open sans';
-}
 
 
+body{ 
+    font-family: 'Open Sans';
+    margin: 0;
+    padding:0;
+  }
+  
 /*--------------header---------------*/ 
-/* navbar */
-
 /* The navigation bar */
 .navbar {
     overflow: hidden;
-    background-color:var(--offwhite);
+    background-color: #F9F9F9;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
-    border-bottom: 1px solid var(--light-gray);
+    border-bottom: 1px solid #C3C7D2;
     z-index: 5;
+    
+  }
 
+  .navbar-nav {
+      margin-top: .8rem;
+      margin-bottom: .8rem;
   }
   
   /* Links inside the navbar */
   .navbar a {
     
     display: block;
-    color: var(--blue);
+    color: #7288a2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 0x;
     text-decoration: none;
     display: inline-flex;
     margin-right: 2.5rem;
@@ -50,7 +54,7 @@
 }
 
 .active {
-    color: var(--orange) !important;
+    color: #FF624D !important;
 }
 
   .float-right {
@@ -64,13 +68,14 @@
   
   /* Change background on mouse-over */
   .navbar a:hover {
-    color: rgb(121, 113, 113);
+    color: #FF624D;
   }
   
 .navbar-brand img {
     display: inline-block;
-    height: 3rem;
+    height: 2.5rem;
     margin-left: 2rem;
+    margin-top: .3rem;
     
 }
 
@@ -78,11 +83,10 @@
     padding: 0;
     margin: 0;
     font-weight: 700;
-    padding-top: .5rem;
+    padding-top: .7rem;
     margin-left: .5rem;
     text-transform: uppercase;
-    /* background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C); */
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C);
     background-size: 100%;
         -webkit-background-clip: text;
@@ -99,19 +103,23 @@
 }
 
 #language {
-    color: var(--dark-gray);
-    border: 1px solid var(--light-gray);
+    color: #7E7A8F;
+    border: 1px solid #C3C7D2;
     padding: .5rem;
     font-size: .75rem;
     border-radius: 4px;
     outline: none;
     
 }
-
 /*--------top---------------*/ 
+main{ 
+    margin-top:2em;
+}
+
 .top{ 
     background-color:var(--orange);
-    margin-top:5em;
+    width:100%;
+   
     
 }
 
@@ -154,7 +162,7 @@
 }
 
 .story{ 
-    max-width:500px;
+    max-width:640px;
     text-align:center;
     margin:0 auto;
     padding:2em;
@@ -184,14 +192,14 @@
 table{ 
     background-color:var(--medium-gray);
     border-radius: 77px;
-    padding: 2em;
-    max-width: 660px;
+    padding: 2em;/*not sure?????*/
+    max-width:660px;
     max-height:600px;
 }
 
 th{ 
-  padding-right:5em;
-  text-align:right;
+    padding-right:5em;
+    text-align:right;
 }
 
 td{ 
@@ -216,6 +224,11 @@ footer{
     padding:1em;
 }
 
+.subscribe{ 
+    font-size:21px;
+    font-weight:400;
+}
+
 .newsletter,.subscribe{ 
     color:var(--dark-gray);
 }
@@ -226,9 +239,13 @@ footer{
     border-right: none;
     border-bottom: 1px solid var(--dark-gray);
     background-color: var(--offwhite);
-    width: 25%;
+    width: 50%;
     color: var(--very-light-gray);
     letter-spacing: -0.2px;  
+}
+
+#newletter-email:hover{ 
+    border:2px solid var(--orange);
 }
 
 
@@ -242,6 +259,12 @@ button{
     margin:5px;
 }
 
+button:hover{ 
+    color:var(--orange); 
+    background-color:var(--white);
+    border:2px solid var(--orange);
+}
+
 .right-panel{ 
     margin-top:2em;
     padding-left:15px;
@@ -253,7 +276,7 @@ button{
 }
 
 .social-icons{ 
-    padding-bottom:10px;
+   
     display:flex;
     justify-content:flex-end;
 }
@@ -266,18 +289,48 @@ button{
     margin-right:5px;
 }
 
+.social-icons a{ 
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.social-icons a:hover{ 
+    background-color:var(--white);
+    color:var(--orange);
+    border:2px solid var(--orange);
+}
+
 
 /*-----------------media queries--------------*/ 
-
+@media(max-width:1057px){ 
+    body{ 
+        padding-top:4em; /*added*/
+    }
+}
 
 @media(max-width:768px){ 
 
-.navbar a { 
-    margin: 0;
+
+.float-right {
+    float: none; 
+ }
+   
+ 
+h2 {
+    margin-top: 6rem;
+}
+
+
+.navbar-nav {
+    margin-right: 0rem;
+    margin-top: 0;
+    padding: 0;
+    margin-left: 1.5rem;
+        
 }
 
 .dropdown {
-    margin-right: .5rem;
+     margin-left: .25rem;
 }
 
 
@@ -290,63 +343,26 @@ button{
 } 
 
 
+.banner-right img{ 
+    padding-left:3em;
+}
+
 .team-info{ 
     flex-direction: column;
     align-items:center;
     padding:0;
+    
 } 
 
 .team-info img{ 
+    padding-right:0;
     padding-bottom: 1em;
 } 
 
-}
-
-@media(max-width:678px){ 
-   
-.dropdown {
-    margin-right: 0;
-}
-
-.navbar-nav {
-    margin-right: 0;
-    padding: 0;
-}
-
-.navbar a { 
-    padding: .3rem;
-
-}
-
-.navbar-brand img {
-    margin-left: .5rem;
-}
-
-h2 {
-    margin-top: 2.5rem;
-    margin-bottom: 0rem;
-}  
-    
-.top h1{ 
-    margin-bottom:1.5em;
-    font-size: 20px;
-}
-
-.banner{ 
-    flex-direction:column;
-    align-items:center;
+th{ 
+    padding:0;
     
 }
-
-.banner-left img{ 
-    height:28px;
-}
-
-.banner-right img{ 
-    max-width:160px;
-    padding-left:2em;
-    margin-top:10px;
-} 
 
 footer{ 
     margin-top:1em;
@@ -374,4 +390,125 @@ footer{
     text-align:center;
 }
 
+}
+
+
+
+@media(max-width:677px){ 
+
+body{ 
+    padding-top:3em; /*added*/
+}
+   
+.dropdown {
+    margin-right: 0;
+}
+
+.navbar-nav {
+    margin-right: 0;
+    padding: 0;
+}
+
+.navbar a { 
+    padding: .1rem;
+    margin: .5rem;
+
+}
+
+.navbar-brand img {
+    
+    margin-left: .5rem;
+    
+}
+
+h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 0rem;
+}
+    
+.top h1{ 
+    margin-bottom:1.5em;
+    font-size: 20px;
+}
+
+.banner{ 
+    flex-direction:column;
+    align-items:center;
+    
+}
+
+.banner-left img{ 
+    height:28px;
+}
+
+.banner-right img{ 
+    padding-left:2em;
+    margin-top:10px;
+} 
+
+.team-info img{ 
+   max-width:300px;
+}
+
+table{ 
+    padding:1em;
+}
+
+.table-eader{ 
+    padding-bottom:0;
+}
+
+
+} 
+
+@media(max-width:470px){ 
+
+#language {
+    padding: .2rem; 
+}
+    
+
+.navbar a { 
+    padding: 0rem;
+    margin: .15rem;
+    
+}
+
+
+.navbar-nav {
+    padding: 0;
+    margin: .2rem;
+
+}
+
+    
+h2 {
+    font-size: 1.2rem;
+        
+}
+}
+
+
+@media(max-width:400px){ 
+
+.navbar a { 
+    padding-left: .35rem;
+    font-size: .75rem;
+}
+
+.dropdown {
+    font-size: .75rem;
+
+}
+
+#language {
+    font-size: .75rem;
+    }
+    
+
+
+
+.banner-right img{ 
+    padding:0;
+}
 }

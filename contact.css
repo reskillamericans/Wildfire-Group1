@@ -25,6 +25,8 @@ body {
     padding: 0;
     background-color: var(--white);
     position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
     
 }
 
@@ -406,13 +408,51 @@ button:hover{
         margin-top: 2.5rem;
         margin-bottom: 0rem;
     }
+
+    .main-header {
+        margin-top: -50px;
+    }
+
+    .container {
+        width: 75%;
+        position: relative;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -25px;
+    }
+
+    label {
+        font-size: 32px;
+    }
+
+    input {
+        padding: 20px;
+    }
+    
+    .subheading {
+        font-size: 15px;
+    }
+
+    .email-border {
+        padding: 0px;
+    }
+
+    textarea {
+        height: 250px;
+        width: 120%;
+    }
+
+    #submit-btn {
+        width: 50%;
+
+    }
+
     @media(max-width:470px){ 
 
         #language {
             padding: .2rem; 
         }
             
-        
         .navbar a { 
             padding: 0rem;
             margin: .15rem;
@@ -423,13 +463,11 @@ button:hover{
         .navbar-nav {
             padding: 0;
             margin: .2rem;
-        
         }
         
    
         h2 {
-            font-size: 1.2rem;
-                
+            font-size: 1.2rem;     
         }
         }
         

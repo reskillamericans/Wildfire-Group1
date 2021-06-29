@@ -26,7 +26,7 @@ body {
     background-color: var(--white);
     position: relative;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     
 }
 
@@ -346,7 +346,7 @@ button:hover{
     }
 
     .dropdown {
-        margin-left: 25rem;
+        margin-left: .25rem;
     }
         
      .container {
@@ -421,8 +421,8 @@ button:hover{
         margin-bottom: -25px;
     }
 
-    label {
-        font-size: 32px;
+    #name-label, #email-label, #number-label, #subject-label, #message-label {
+        font-size: 25px;
     }
 
     input {
@@ -469,22 +469,5 @@ button:hover{
         h2 {
             font-size: 1.2rem;     
         }
-        }
-        
-        @media(max-width:400px){ 
-        
-        .navbar a { 
-            padding-left: .35rem;
-            font-size: .75rem;
-        }
-        
-        .dropdown {
-            font-size: .75rem;
-        
-        }
-        
-        #language {
-            font-size: .75rem;
-            }
         }
     }

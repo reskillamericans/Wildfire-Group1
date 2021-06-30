@@ -19,7 +19,7 @@
     box-sizing: inherit;   
 }
 
-body {
+body, html {
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -325,7 +325,7 @@ button:hover{
 /* media queries */
 @media(max-width: 1057px) {
     body {
-        padding-top: 4em;
+        margin-top: -50px;
     }
 }
 
@@ -363,7 +363,7 @@ button:hover{
        text-align: center;
    }
 
-   .fototer-caontainer p {
+   .footer-container p {
        font-size: 12px;
    }
 
@@ -383,7 +383,7 @@ button:hover{
 
 @media (max-width: 677px) {
     body {
-        padding-top: 3em;
+       margin-top: 30px;
     }
 
     .dropdown {
@@ -428,6 +428,11 @@ button:hover{
     input {
         padding: 20px;
     }
+
+    #dropdown {
+        padding: 20px;
+        width: 120%;
+    }
     
     .subheading {
         font-size: 15px;
@@ -438,17 +443,16 @@ button:hover{
     }
 
     textarea {
-        height: 250px;
+        height: 350px;
         width: 120%;
     }
 
     #submit-btn {
         width: 50%;
-
     }
 
     @media(max-width:470px){ 
-
+        
         #language {
             padding: .2rem; 
         }
@@ -469,5 +473,57 @@ button:hover{
         h2 {
             font-size: 1.2rem;     
         }
+
+        footer {
+            background-color: var(--offwhite);
+            
+        }
+
+        @media(max-width:375px){ 
+
+            .navbar a { 
+                padding-left: .35rem;
+                font-size: .75rem;
+            }
+            
+            .dropdown {
+                font-size: .75rem;
+            }
+            
+            #language {
+                font-size: .75rem;
+                }
+                
+                .main-header {
+                    font-size: 50px;
+                }
+
+                #name-label, #email-label, #number-label, #subject-label, #message-label {
+                    font-size: 40px;
+                }
+
+                input {
+                    padding: 50px;
+                    width: 80%;
+                }
+
+                #dropdown {
+                    padding: 50px;
+                }
+
+                .subheading {
+                    font-size: 25px;
+                }
+
+                textarea {
+                    height: 400px;
+                }
+
+                #submit-btn {
+                    width: 80%;
+                }
+              
+            
+            }
         }
     }

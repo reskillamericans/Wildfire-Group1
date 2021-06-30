@@ -4,15 +4,9 @@ const AppError = require("../utils/appError");
 //Get all FAQs
 exports.getAllFaqs = async (req, res, next) => {
   try {
+    //req expression from form
     const faqs = await Faq.find({});
-
-    res.status(200).json({
-      status: "success",
-      results: faqs.length,
-      data: {
-        faqs,
-      },
-    });
+    res.status(200).render("faq", { faqs });
   } catch (err) {
     next(err);
   }

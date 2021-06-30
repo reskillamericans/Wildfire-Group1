@@ -1,16 +1,16 @@
-require('dotenv').config();
-const Faq = require('../models/faq');
-const faqData = require('../data/faqData.json');
+require("dotenv").config();
+const Faq = require("../models/faq");
+const faqData = require("../data/faqData.json");
 
 //Database connection
-const dbSetup = require('../database/setup');
+const dbSetup = require("../database/setup");
 
 dbSetup();
 
 const importData = async () => {
   try {
     await Faq.create(faqData);
-    console.log('Data Successfully loaded...');
+    console.log("Data Successfully loaded...");
   } catch (err) {
     console.log(err);
   }
@@ -20,16 +20,16 @@ const importData = async () => {
 const deleteData = async () => {
   try {
     await Faq.deleteMany();
-    console.log('Data Successfully deleted...');
+    console.log("Data Successfully deleted...");
   } catch (err) {
     console.log(err);
+    process.exit();
   }
-  process.exit();
 };
 
-if (process.argv[2] === '--import') {
+if (process.argv[2] === "--import") {
   importData();
-} else if (process.argv[2] === '--delete') {
+} else if (process.argv[2] === "--delete") {
   deleteData();
 }
 

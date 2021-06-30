@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ</title>
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/faq.css" />
+    <link
+      rel="shortcut icon"
+      href="images/faq/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <a class="navbar-brand" href="/index">
+          <!-- inline block align top left -->
+          <img src="images/faq/fire_logo.png" alt="" />
+          <h2 class="logo">Fire Tracker</h2>
+        </a>
+        <div menu-right class="float-right">
+          <ul class="navbar-nav">
+            <li class="dropdown">
+              <select id="language" required>
+                <option placeholder="Select your language">
+                  Select Language
+                </option>
+                <option>English</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>Arabic</option>
+                <option>Chinese</option>
+              </select>
+            </li>
+            <li>
+              <a href="/index">Home</a>
+            </li>
+            <li>
+              <a href="/about-us">About</a>
+            </li>
+            <li>
+              <a class="active" href="/faq">FAQ</a>
+            </li>
+            <li>
+              <a href="/contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="search-box">
+        <form action="/faq" method="GET" class="form">
+          <input
+            name="search"
+            type="search"
+            placeholder="What would you like to know?"
+            class="search-field"
+          />
+          <button type="submit" class="search-button">
+            <img src="images/faq/search_icon.png" />
+          </button>
+        </form>
+      </div>
+
+      <h3>
+        Or click on one of the questions below <br />
+        <span>
+          If your question is not found, please feel free to message us through
+          contact us.
+        </span>
+      </h3>
+
+      <div class="accordion">
+        <% faqs.map((faq, idx) =>{ %>
+        <div
+          class="accordion-item <% if(faqs.length-1 === idx){ %> border <% } %>"
+        >
+          <a> <%= faq.question %> </a>
+          <div class="content">
+            <p><%= faq.answer %></p>
+          </div>
+        </div>
+
+        <%}) %>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="javascripts/function.js"></script>
+  </body>
+</html>

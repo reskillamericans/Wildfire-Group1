@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --offwhite: #f9f9f9;
+    --white: #ffffff; 
+    --black: #180126;
+    --gray: #7e7a8f;
+    --lightgray: #cec7d2;
+    --verylightgray:#e5e5e5;
+    --orange: #ff624d;
+    --green: #089285;
+    --bluegray: #7288a2;
+}
+
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;   
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    position: relative;
+    
+}
+
+/* navbar */
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #F9F9F9;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    border-bottom: 1px solid #C3C7D2;
+    z-index: 5;
+  }
+
+  .navbar-nav {
+      margin-top: .8rem;
+      margin-bottom: .8rem;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    display: block;
+    color: #7288a2;
+    text-align: center;
+    padding: 16px 0x;
+    text-decoration: none;
+    display: inline-flex;
+    margin-right: 2.5rem;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.active {
+    color: #FF624D !important;
+}
+
+  .float-right {
+    float: right;
+  }
+
+  li {
+    display: inline;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    color: #FF624D;
+  }
+  
+.navbar-brand img {
+    display: inline-block;
+    height: 2.5rem;
+    margin-left: 2rem;
+    margin-top: .3rem;
+    
+}
+
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    padding-top: .7rem;
+    margin-left: .5rem;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    background-image: linear-gradient(to right, #FF4C4C, #FFA800, #F2AA1C, #DE522C);
+    background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+}
+
+.dropdown {
+    box-sizing: border-box;
+    margin-right: 3.5rem;
+    font: 'Open Sans';
+}
+
+
+#language {
+    color: #7E7A8F;
+    border: 1px solid #C3C7D2;
+    padding: .5rem;
+    font-size: .75rem;
+    border-radius: 4px;
+    outline: none;
+    background-color: var(--white);
+    
+}
+
+/* ------contact form------*/
+.container { 
+    font-style: normal;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 150px; 
+   
+}
+
+fieldset {
+    border: none;  
+}
+
+.main-header {
+    font-size: 37px;
+    color: var(black);    
+    font-family: 'Open Sans', sans-serif; 
+    margin-left: 10px; 
+}
+
+ input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid var(--verylightgray);
+    border-radius: 4px;
+    background-color: var(--verylightgray);
+}
+
+select {
+    background-color: var(--verylightgray);
+}
+
+
+#name-label, #email-label, #number-label, #subject-label, #message-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: bold;
+    letter-spacing: 0.07em;
+    color: #180126;
+}
+
+#dropdown {
+    width: 100%;
+    height: 30px;
+    border: 1px solid var(--verylightgray);
+    border-radius: 4px;
+    color: var(--gray);
+    
+}
+
+option {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.subheading {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    size: 13px;
+    color: var(--gray);
+    display: block;
+    margin-top: -5px;
+    letter-spacing: -0.2px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid var(--verylightgray);
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+    background-color: var(--verylightgray);
+}
+
+#submit-btn {
+    background-color: var(--orange);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    float: right;
+    border-radius: 4px;
+    position: relative;
+    width: 343px;
+    height: 40px; 
+    border: none;
+    margin-top: 0px;
+}
+
+#submit-btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+.button:active {
+    background-color: var(--white);
+    color: var(--orange);
+    transform: translateY(4px);
+    
+}
+
+
+/*----updated footer-------- */
+footer{ 
+    background-color:var(--offwhite);
+    border-top: 1px solid var(--verylightgray);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-container{ 
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+.subscribe{ 
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.newsletter,.subscribe{ 
+    color:var(--gray);
+}
+
+#newsletter-email{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--gray);
+    background-color: var(--offwhite);
+    width: 50%;
+    color: var(--verylightgray);
+    letter-spacing: -0.2px;  
+}
+
+#newletter-email:hover{ 
+    border: 2px solid var(--orange);
+}
+
+button{ 
+    background-color: var(--orange);
+    border: none; 
+    border-radius: 5px; 
+    color: var(--white);
+    padding: 5px; 
+    width: 120px;
+    margin: 5px;
+}
+
+button:hover{ 
+    color: var(--orange); 
+    background-color: var(--white);
+    border: 2px solid var(--orange);
+}
+
+.right-panel{ 
+    margin-top: 2em;
+    padding-left: 15px;
+}
+
+.right-panel p{ 
+    text-align: right;
+    color: var(--gray);
+}
+
+.social-icons{ 
+   
+    display:flex;
+    justify-content:flex-end;
+}
+
+.social-icons a{ 
+    background-color: var(--orange);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    margin-right: 5px;
+}
+
+.social-icons a{ 
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.social-icons a:hover{ 
+    background-color: var(--white);
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+
+
+/* media queries */
+@media(max-width: 1057px) {
+    body {
+        padding-top: 4em;
+    }
+}
+
+@media(max-width: 768px) {
+    .float-right {
+        float: none;
+    }
+
+    h2 {
+        margin-top: 6rem;
+    }
+
+    .navbar-nav {
+        margin-right: 0rem;
+        margin-top: 0;
+        padding: 0;
+        margin-left: 1.5rem;
+    }
+
+    .dropdown {
+        margin-left: 25rem;
+    }
+        
+     .container {
+        display: block;
+    }   
+
+    footer {
+        margin-top: 1em;
+    }
+    
+   .footer-container {
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }
+
+   .fototer-caontainer p {
+       font-size: 12px;
+   }
+
+   .subscribe {
+       font-size: 20px;
+   }
+
+   .social-icons {
+       justify-content: center;
+   }
+
+
+    .right-panel p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 677px) {
+    body {
+        padding-top: 3em;
+    }
+
+    .dropdown {
+        margin-right: 0;
+    }
+
+    .navbar-nav {
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .navbar a {
+        padding: .1rem;
+        margin: .5rem;
+    }
+
+    .navbar-brand img {
+        margin-left: .5rem;
+    }
+
+    h2 {
+        margin-top: 2.5rem;
+        margin-bottom: 0rem;
+    }
+    @media(max-width:470px){ 
+
+        #language {
+            padding: .2rem; 
+        }
+            
+        
+        .navbar a { 
+            padding: 0rem;
+            margin: .15rem;
+            
+        }
+        
+        
+        .navbar-nav {
+            padding: 0;
+            margin: .2rem;
+        
+        }
+        
+   
+        h2 {
+            font-size: 1.2rem;
+                
+        }
+        }
+        
+        @media(max-width:400px){ 
+        
+        .navbar a { 
+            padding-left: .35rem;
+            font-size: .75rem;
+        }
+        
+        .dropdown {
+            font-size: .75rem;
+        
+        }
+        
+        #language {
+            font-size: .75rem;
+            }
+        }
+    }

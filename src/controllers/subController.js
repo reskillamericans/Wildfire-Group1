@@ -44,10 +44,11 @@ exports.createSub = async (req, res, next) => {
       message: `${req.body.email} has joined as a new subscriber!`,
     });
 
-    res.status(200).json({
-      status: "success",
-      message: "Thank you for subscribing!",
-    });
+    req.flash(
+      "subscribed",
+      "Thank you for subscribing to the Wildfire App Newsletter!"
+    );
+    res.status(200).redirect("/index");
   } catch (err) {
     next(err);
   }

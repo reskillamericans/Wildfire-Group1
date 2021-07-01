@@ -4,9 +4,11 @@ const AppError = require("../utils/appError");
 //Get all FAQs
 exports.getAllFaqs = async (req, res, next) => {
   try {
-    //req expression from form
-    const faqs = await Faq.find({});
-    res.status(200).render("faq", { faqs });
+    let search = req.query.search ? {question: new RegExp(req.query.search, 'i')} : {}
+
+    const faqs = await Faq.find(search)
+
+    res.status(200).render("faq", { faqs, search: req.query.search });
   } catch (err) {
     next(err);
   }

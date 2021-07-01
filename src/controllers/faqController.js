@@ -15,7 +15,7 @@ exports.getAllFaqs = async (req, res, next) => {
       faqs = await Faq.find({});
     }
 
-    res.status(200).render("faq", { faqs });
+    res.status(200).render("faq", { faqs, search: req.query.search });
   } catch (err) {
     next(err);
   }

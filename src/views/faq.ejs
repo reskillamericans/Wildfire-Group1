@@ -59,13 +59,14 @@
       <h2>Frequently Asked Questions</h2>
 
       <div class="search-box">
-        <form action="/faq" method="GET" class="form">
-          <input
-            name="search"
-            type="search"
-            placeholder="What would you like to know?"
-            class="search-field"
-          />
+        <form action="#" method="GET" class="form">
+          <input <% if(search){ %>
+
+          value=<%= search %> 
+          <% } %> 
+          name="search" 
+          type="search"
+          placeholder="What would you like to know?" class="search-field" />
           <button type="submit" class="search-button">
             <img src="images/faq/search_icon.png" />
           </button>
@@ -97,5 +98,15 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="javascripts/function.js"></script>
+    <script>
+      const input = document.querySelector('input')
+
+      input.addEventListener('input', (e)=>{
+        if(!e.currentTarget.value){
+          window.location.href = `${window.location.origin}/faq`
+        }
+      });
+    
+    </script>
   </body>
 </html>

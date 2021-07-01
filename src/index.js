@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
+const flash = require("connect-flash");
+const session = require("express-session");
 const ejsMate = require("ejs-mate");
 const viewRouter = require("./routes/viewRoutes");
 const faqRouter = require("./routes/faqRoutes");
@@ -24,6 +26,21 @@ process.on("uncaughtException", (err) => {
 app.engine("ejs", ejsMate);
 
 //Middleware
+app.use(
+  session({
+    secret: "thisshouldbeabettersecret",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 6000 },
+  })
+);
+app.use(flash());
+
+app.use((req, res, next) => {
+  res.locals.subscribed = req.flash("subscribed");
+  next();
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));

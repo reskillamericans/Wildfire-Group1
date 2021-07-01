@@ -44,6 +44,20 @@
             </li>
           </ul>
         </div>
+        <% if(subscribed.length){ %>
+        <h4
+          style="
+            background-color: #d4edda;
+            border-radius: 10px;
+            color: #224b1f;
+            display: inline-block;
+            font-weight: 400;
+            padding: 5px 10px;
+          "
+        >
+          <%= subscribed %>
+        </h4>
+        <% } %>
       </div>
     </header>
 
@@ -127,15 +141,17 @@
             <h5 class="subscribe">Subscribe</h5>
 
             <div class="subscribe-email">
-              <input
-                class="email-border"
-                type="text"
-                id="newsletter-email"
-                placeholder="Email Address"
-                autocapitalize="off"
-              />
-
-              <button id="subscribe-btn" type="submit">Subscribe</button>
+              <form action="/subscribers" method="POST">
+                <input
+                  name="email"
+                  class="email-border"
+                  type="text"
+                  id="newsletter-email"
+                  placeholder="Email Address"
+                  autocapitalize="off"
+                />
+                <button id="subscribe-btn" type="submit">Subscribe</button>
+              </form>
 
               <p class="newsletter">
                 I would like to receive communications about Fire Tracker app

@@ -19,8 +19,14 @@
     box-sizing: inherit;   
 }
 
-body, html {
-    min-height: 100vh;
+html {
+    height: 100%; /*added the height to eliminate the white space under the footer*/
+}
+
+body {
+    min-height: 100%; /*changed from 100vh to 100% to eliminate white space under footer*/
+    display: flex; /*added to help eliminate white space under footer*/
+    flex-direction: column; /*added to eliminate white space under footer*/
     margin: 0;
     padding: 0;
     background-color: var(--white);
@@ -128,7 +134,7 @@ body, html {
     display: block;
     justify-content: center;
     align-items: center;
-    margin: 150px; 
+    margin: 7em 6em 6em 6em; /*changed margin sizes*/
    
 }
 
@@ -145,10 +151,11 @@ fieldset {
 
  input {
     width: 100%;
-    height: 30px;
+    height: 60px; /*increased the height of input*/
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
     background-color: var(--verylightgray);
+    
 }
 
 select {
@@ -158,7 +165,7 @@ select {
 
 #name-label, #email-label, #number-label, #subject-label, #message-label {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 16px; /*remained the same size*/
     line-height: 40px;
     font-weight: bold;
     letter-spacing: 0.07em;
@@ -167,11 +174,10 @@ select {
 
 #dropdown {
     width: 100%;
-    height: 30px;
+    height: 60px; /*increased the height*/
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
-    color: var(--gray);
-    
+    color: var(--gray); 
 }
 
 option {
@@ -190,7 +196,7 @@ option {
 
 textarea {
     width: 100%;
-    height: 200px;
+    height: 620px; /*increased the height*/
     padding: 12px 20px;
     box-sizing: border-box;
     border: 1px solid var(--verylightgray);
@@ -238,6 +244,7 @@ footer{
     background-color:var(--offwhite);
     border-top: 1px solid var(--verylightgray);
     font-family: 'Open Sans', sans-serif;
+    margin-top: auto; /*added to eliminate the white space under footer*/
 }
 
 .footer-container{ 
@@ -322,13 +329,8 @@ button:hover{
 }
 
 
-/* media queries */
-@media(max-width: 1057px) {
-    body {
-        margin-top: -50px;
-    }
-}
 
+/*updated media queries*/
 @media(max-width: 768px) {
     .float-right {
         float: none;
@@ -422,18 +424,10 @@ button:hover{
     }
 
     #name-label, #email-label, #number-label, #subject-label, #message-label {
-        font-size: 25px;
+        font-size: 16px;
     }
 
-    input {
-        padding: 20px;
-    }
-
-    #dropdown {
-        padding: 20px;
-        width: 120%;
-    }
-    
+      
     .subheading {
         font-size: 15px;
     }
@@ -463,7 +457,6 @@ button:hover{
             
         }
         
-        
         .navbar-nav {
             padding: 0;
             margin: .2rem;
@@ -476,10 +469,12 @@ button:hover{
 
         footer {
             background-color: var(--offwhite);
-            
+            margin-top: auto;
         }
-
-        @media(max-width:375px){ 
+    }
+}
+       
+    @media(max-width:360px){ 
 
             .navbar a { 
                 padding-left: .35rem;
@@ -493,37 +488,23 @@ button:hover{
             #language {
                 font-size: .75rem;
                 }
-                
+
                 .main-header {
-                    font-size: 50px;
+                    font-size: 31px;
                 }
 
                 #name-label, #email-label, #number-label, #subject-label, #message-label {
-                    font-size: 40px;
-                }
-
-                input {
-                    padding: 50px;
-                    width: 80%;
-                }
-
-                #dropdown {
-                    padding: 50px;
+                    font-size: 16px;
                 }
 
                 .subheading {
                     font-size: 25px;
                 }
 
-                textarea {
-                    height: 400px;
-                }
 
                 #submit-btn {
                     width: 80%;
                 }
-              
             
             }
-        }
-    }
+    

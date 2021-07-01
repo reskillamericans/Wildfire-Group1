@@ -4,8 +4,17 @@ const AppError = require("../utils/appError");
 //Get all FAQs
 exports.getAllFaqs = async (req, res, next) => {
   try {
-    //req expression from form
-    const faqs = await Faq.find({});
+    let faqs;
+
+    if (req.query.search) {
+      const search = req.query.search;
+      faqs = await Faq.find({
+        question: { $regex: search, $options: "i" },
+      });
+    } else {
+      faqs = await Faq.find({});
+    }
+
     res.status(200).render("faq", { faqs });
   } catch (err) {
     next(err);

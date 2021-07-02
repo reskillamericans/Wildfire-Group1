@@ -501,7 +501,7 @@ button:hover{
 
 
     /*----media queries for smart phones-----*/
-    @media(max-width:480px){ 
+    @media(max-width:470px){ 
         
         #language {
             padding: .2rem; 
@@ -563,7 +563,7 @@ button:hover{
     }
 }
        
-    @media(max-width:360px){ 
+    @media(max-width:400px){ 
 
             .navbar a { 
                 padding-left: .35rem;

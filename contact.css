@@ -151,7 +151,8 @@ fieldset {
 
  input {
     width: 100%;
-    height: 60px; /*increased the height of input*/
+    height: 40px; /*decreased the height of input*/
+    padding: 0em 2em; /*added padding*/
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
     background-color: var(--verylightgray);
@@ -173,8 +174,9 @@ select {
 }
 
 #dropdown {
-    width: 100%;
-    height: 60px; /*increased the height*/
+    width: 105%; /*sligh increase to the width to match input*/
+    height: 40px; /*decreased the height*/
+    padding: 0em 2em; /*added padding*/
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
     color: var(--gray); 
@@ -195,8 +197,8 @@ option {
 }
 
 textarea {
-    width: 100%;
-    height: 620px; /*increased the height*/
+    width: 105%;
+    height: 320px; /*decreased the height*/
     padding: 12px 20px;
     box-sizing: border-box;
     border: 1px solid var(--verylightgray);
@@ -234,8 +236,7 @@ button:hover {
 .button:active {
     background-color: var(--white);
     color: var(--orange);
-    transform: translateY(4px);
-    
+    transform: translateY(4px);    
 }
 
 
@@ -377,10 +378,32 @@ button:hover{
        justify-content: center;
    }
 
+   .right-panel p {
+    text-align: center;
+}
 
-    .right-panel p {
-        text-align: center;
+   .navbar a:hover {
+    color: #FF624D;
+  }
+
+  /*---added to make header & footer responsive----*/
+    #submit-btn:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
     }
+    
+    button:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
+    }
+    .button:active {
+        background-color: var(--white);
+        color: var(--orange);
+        transform: translateY(4px);    
+    }
+
 }
 
 @media (max-width: 677px) {
@@ -436,16 +459,49 @@ button:hover{
         padding: 0px;
     }
 
+    fieldset {
+        margin: 1em 0em; /*added*/
+    }
+
+    #dropdown {
+        width: 120%; /*added*/
+    }
     textarea {
-        height: 350px;
-        width: 120%;
+        height: 430px;
+        width: 120%; /*added*/
     }
 
     #submit-btn {
         width: 50%;
     }
 
-    @media(max-width:470px){ 
+    .navbar a:hover {
+        color: #FF624D;
+      }
+
+  /*---added to make header & footer responsive----*/
+
+      #submit-btn:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
+    }
+    
+    button:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
+    }
+    .button:active {
+        background-color: var(--white);
+        color: var(--orange);
+        transform: translateY(4px);    
+    }
+
+
+
+    /*----media queries for smart phones-----*/
+    @media(max-width:480px){ 
         
         #language {
             padding: .2rem; 
@@ -467,10 +523,43 @@ button:hover{
             font-size: 1.2rem;     
         }
 
+        fieldset {
+            margin: 1em 0em; /*added*/
+        }
+
+        textarea {
+            height: 430px; /*added*/
+        }
+
         footer {
             background-color: var(--offwhite);
             margin-top: auto;
         }
+
+
+          /*---added to make header & footer responsive----*/
+
+        .navbar a:hover {
+            color: #FF624D;
+          }
+
+          #submit-btn:hover {
+            background-color: var(--white);
+            color: var(--orange);
+            border: 2px solid var(--orange);
+        }
+        
+        button:hover {
+            background-color: var(--white);
+            color: var(--orange);
+            border: 2px solid var(--orange);
+        }
+        .button:active {
+            background-color: var(--white);
+            color: var(--orange);
+            transform: translateY(4px);    
+        }
+
     }
 }
        
@@ -501,10 +590,42 @@ button:hover{
                     font-size: 25px;
                 }
 
+                fieldset {
+                    margin: 1em 0em; /*added*/
+                }
+
+                textarea {
+                    height: 430px; /*added*/
+                }
 
                 #submit-btn {
                     width: 80%;
                 }
+
+
+        /*---added to make header & footer responsive----*/
+
+                .navbar a:hover {
+                    color: #FF624D;
+                  }
             
+                  #submit-btn:hover {
+                    background-color: var(--white);
+                    color: var(--orange);
+                    border: 2px solid var(--orange);
+                }
+                
+                button:hover {
+                    background-color: var(--white);
+                    color: var(--orange);
+                    border: 2px solid var(--orange);
+                }
+
+                .button:active {
+                    background-color: var(--white);
+                    color: var(--orange);
+                    transform: translateY(4px);    
+                }
+
             }
     

@@ -19,12 +19,20 @@
     box-sizing: inherit;   
 }
 
+html {
+    height: 100%; /*added the height to eliminate the white space under the footer*/
+}
+
 body {
-    min-height: 100vh;
+    min-height: 100%; /*changed from 100vh to 100% to eliminate white space under footer*/
+    display: flex; /*added to help eliminate white space under footer*/
+    flex-direction: column; /*added to eliminate white space under footer*/
     margin: 0;
     padding: 0;
     background-color: var(--white);
     position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
     
 }
 
@@ -126,7 +134,7 @@ body {
     display: block;
     justify-content: center;
     align-items: center;
-    margin: 150px; 
+    margin: 7em 6em 6em 6em; /*changed margin sizes*/
    
 }
 
@@ -143,10 +151,12 @@ fieldset {
 
  input {
     width: 100%;
-    height: 30px;
+    height: 40px; /*decreased the height of input*/
+    padding: 0em 2em; /*added padding*/
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
     background-color: var(--verylightgray);
+    
 }
 
 select {
@@ -156,7 +166,7 @@ select {
 
 #name-label, #email-label, #number-label, #subject-label, #message-label {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 16px; /*remained the same size*/
     line-height: 40px;
     font-weight: bold;
     letter-spacing: 0.07em;
@@ -164,12 +174,12 @@ select {
 }
 
 #dropdown {
-    width: 100%;
-    height: 30px;
+    width: 105%; /*sligh increase to the width to match input*/
+    height: 40px; /*decreased the height*/
+    padding: 0em 2em; /*added padding*/
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
-    color: var(--gray);
-    
+    color: var(--gray); 
 }
 
 option {
@@ -187,8 +197,8 @@ option {
 }
 
 textarea {
-    width: 100%;
-    height: 200px;
+    width: 105%;
+    height: 320px; /*decreased the height*/
     padding: 12px 20px;
     box-sizing: border-box;
     border: 1px solid var(--verylightgray);
@@ -226,8 +236,7 @@ button:hover {
 .button:active {
     background-color: var(--white);
     color: var(--orange);
-    transform: translateY(4px);
-    
+    transform: translateY(4px);    
 }
 
 
@@ -236,6 +245,7 @@ footer{
     background-color:var(--offwhite);
     border-top: 1px solid var(--verylightgray);
     font-family: 'Open Sans', sans-serif;
+    margin-top: auto; /*added to eliminate the white space under footer*/
 }
 
 .footer-container{ 
@@ -320,13 +330,8 @@ button:hover{
 }
 
 
-/* media queries */
-@media(max-width: 1057px) {
-    body {
-        padding-top: 4em;
-    }
-}
 
+/*updated media queries*/
 @media(max-width: 768px) {
     .float-right {
         float: none;
@@ -344,7 +349,7 @@ button:hover{
     }
 
     .dropdown {
-        margin-left: 25rem;
+        margin-left: .25rem;
     }
         
      .container {
@@ -361,7 +366,7 @@ button:hover{
        text-align: center;
    }
 
-   .fototer-caontainer p {
+   .footer-container p {
        font-size: 12px;
    }
 
@@ -373,15 +378,37 @@ button:hover{
        justify-content: center;
    }
 
+   .right-panel p {
+    text-align: center;
+}
 
-    .right-panel p {
-        text-align: center;
+   .navbar a:hover {
+    color: #FF624D;
+  }
+
+  /*---added to make header & footer responsive----*/
+    #submit-btn:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
     }
+    
+    button:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
+    }
+    .button:active {
+        background-color: var(--white);
+        color: var(--orange);
+        transform: translateY(4px);    
+    }
+
 }
 
 @media (max-width: 677px) {
     body {
-        padding-top: 3em;
+       margin-top: 30px;
     }
 
     .dropdown {
@@ -406,47 +433,199 @@ button:hover{
         margin-top: 2.5rem;
         margin-bottom: 0rem;
     }
-    @media(max-width:470px){ 
 
+    .main-header {
+        margin-top: -50px;
+    }
+
+    .container {
+        width: 75%;
+        position: relative;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -25px;
+    }
+
+    #name-label, #email-label, #number-label, #subject-label, #message-label {
+        font-size: 16px;
+    }
+
+      
+    .subheading {
+        font-size: 15px;
+    }
+
+    .email-border {
+        padding: 0px;
+    }
+
+    fieldset {
+        margin: 1em 0em; /*added*/
+    }
+
+    #dropdown {
+        width: 120%; /*added*/
+    }
+    textarea {
+        height: 430px;
+        width: 120%; /*added*/
+    }
+
+    #submit-btn {
+        width: 50%;
+    }
+
+    .navbar a:hover {
+        color: #FF624D;
+      }
+
+  /*---added to make header & footer responsive----*/
+
+      #submit-btn:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
+    }
+    
+    button:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
+    }
+    .button:active {
+        background-color: var(--white);
+        color: var(--orange);
+        transform: translateY(4px);    
+    }
+
+
+
+    /*----media queries for smart phones-----*/
+    @media(max-width:480px){ 
+        
         #language {
             padding: .2rem; 
         }
             
-        
         .navbar a { 
             padding: 0rem;
             margin: .15rem;
             
         }
         
-        
         .navbar-nav {
             padding: 0;
             margin: .2rem;
-        
         }
         
    
         h2 {
-            font-size: 1.2rem;
-                
+            font-size: 1.2rem;     
         }
+
+        fieldset {
+            margin: 1em 0em; /*added*/
+        }
+
+        textarea {
+            height: 430px; /*added*/
+        }
+
+        footer {
+            background-color: var(--offwhite);
+            margin-top: auto;
+        }
+
+
+          /*---added to make header & footer responsive----*/
+
+        .navbar a:hover {
+            color: #FF624D;
+          }
+
+          #submit-btn:hover {
+            background-color: var(--white);
+            color: var(--orange);
+            border: 2px solid var(--orange);
         }
         
-        @media(max-width:400px){ 
-        
-        .navbar a { 
-            padding-left: .35rem;
-            font-size: .75rem;
+        button:hover {
+            background-color: var(--white);
+            color: var(--orange);
+            border: 2px solid var(--orange);
         }
-        
-        .dropdown {
-            font-size: .75rem;
-        
+        .button:active {
+            background-color: var(--white);
+            color: var(--orange);
+            transform: translateY(4px);    
         }
-        
-        #language {
-            font-size: .75rem;
-            }
-        }
+
     }
+}
+       
+    @media(max-width:360px){ 
+
+            .navbar a { 
+                padding-left: .35rem;
+                font-size: .75rem;
+            }
+            
+            .dropdown {
+                font-size: .75rem;
+            }
+            
+            #language {
+                font-size: .75rem;
+                }
+
+                .main-header {
+                    font-size: 31px;
+                }
+
+                #name-label, #email-label, #number-label, #subject-label, #message-label {
+                    font-size: 16px;
+                }
+
+                .subheading {
+                    font-size: 25px;
+                }
+
+                fieldset {
+                    margin: 1em 0em; /*added*/
+                }
+
+                textarea {
+                    height: 430px; /*added*/
+                }
+
+                #submit-btn {
+                    width: 80%;
+                }
+
+
+        /*---added to make header & footer responsive----*/
+
+                .navbar a:hover {
+                    color: #FF624D;
+                  }
+            
+                  #submit-btn:hover {
+                    background-color: var(--white);
+                    color: var(--orange);
+                    border: 2px solid var(--orange);
+                }
+                
+                button:hover {
+                    background-color: var(--white);
+                    color: var(--orange);
+                    border: 2px solid var(--orange);
+                }
+
+                .button:active {
+                    background-color: var(--white);
+                    color: var(--orange);
+                    transform: translateY(4px);    
+                }
+
+            }
+    

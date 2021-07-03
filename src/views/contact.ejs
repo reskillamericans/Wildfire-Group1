@@ -98,8 +98,17 @@
               <h5 class="subscribe">Subscribe</h5>
             
               <div class="subscribe-email">
-                <input class="email-border" type="text" id="newsletter-email" placeholder="Email Address" autocapitalize="off">
-                <button id="subscribe-btn" type="submit">Subscribe</button>
+                <form action="/subscribers" method="POST">
+                  <input
+                    name="email"
+                    class="email-border"
+                    type="text"
+                    id="newsletter-email"
+                    placeholder="Email Address"
+                    autocapitalize="off"
+                  />
+                  <button id="subscribe-btn" type="submit">Subscribe</button>
+                </form>
                 <p class="newsletter">I would like to receive communcations about Fire Tracker app services.</p>
               </div>
             </div>

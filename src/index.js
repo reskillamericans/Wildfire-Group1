@@ -74,7 +74,7 @@ app.use("/subscribers", subRouter);
 
 //Unhandled Routes
 app.all("*", (req, res, next) => {
-  next(new AppError(404, `Can't find ${req.originalUrl} on this server!`));
+  next(new AppError(404, `Sorry the page you are looking for cannot be found.`));
 });
 
 //Global Error Handler

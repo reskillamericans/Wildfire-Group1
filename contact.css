@@ -134,12 +134,14 @@ body {
     display: block;
     justify-content: center;
     align-items: center;
-    margin: 7em 6em 6em 6em; /*changed margin sizes*/
+    margin: 7em auto; /*changed margin sizes*/
+    width: 60%; /*added*/
    
 }
 
 fieldset {
     border: none;  
+    margin: 1em 0em; /*added*/
 }
 
 .main-header {
@@ -161,6 +163,7 @@ fieldset {
 
 select {
     background-color: var(--verylightgray);
+    box-sizing: content-box; /*added*/
 }
 
 
@@ -174,12 +177,13 @@ select {
 }
 
 #dropdown {
-    width: 105%; /*sligh increase to the width to match input*/
+    width: 100%; /*sligh increase to the width to match input*/
     height: 40px; /*decreased the height*/
     padding: 0em 2em; /*added padding*/
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
     color: var(--gray); 
+    box-sizing: content-box; /*added*/
 }
 
 option {
@@ -197,7 +201,8 @@ option {
 }
 
 textarea {
-    width: 105%;
+    width: 100%; /*changed width*/
+    box-sizing: content-box; /*added*/
     height: 320px; /*decreased the height*/
     padding: 12px 20px;
     box-sizing: border-box;
@@ -220,6 +225,7 @@ textarea {
     height: 40px; 
     border: none;
     margin-top: 0px;
+    cursor: pointer; /*added*/
 }
 
 #submit-btn:hover {
@@ -236,7 +242,8 @@ button:hover {
 .button:active {
     background-color: var(--white);
     color: var(--orange);
-    transform: translateY(4px);    
+    transform: translateY(4px); 
+    cursor: pointer;   
 }
 
 
@@ -286,6 +293,7 @@ button{
     padding: 5px; 
     width: 120px;
     margin: 5px;
+    cursor: pointer; /*added*/
 }
 
 button:hover{ 
@@ -433,10 +441,11 @@ button:hover{
         margin-top: 2.5rem;
         margin-bottom: 0rem;
     }
-
+    
+    /*remove
     .main-header {
         margin-top: -50px;
-    }
+    }*/
 
     .container {
         width: 75%;
@@ -566,6 +575,7 @@ button:hover{
     @media(max-width:400px){ 
 
             .navbar a { 
+               
                 padding-left: .35rem;
                 font-size: .75rem;
             }

@@ -201,11 +201,10 @@ option {
 }
 
 textarea {
-    width: 110%; /*changed width*/
+    width: 100%; /*changed width to 100%*/
     box-sizing: content-box; /*added*/
     height: 320px; /*decreased the height*/
     padding: 12px 20px;
-    box-sizing: border-box;
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
     font-size: 16px;

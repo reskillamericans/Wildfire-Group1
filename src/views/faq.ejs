@@ -19,7 +19,7 @@
   <body>
     <div class="header">
       <div class="navbar">
-        <a class="navbar-brand" href="/index">
+        <a class="navbar-brand" href="/">
           <!-- inline block align top left -->
           <img src="images/faq/fire_logo.png" alt="" />
           <h2 class="logo">Fire Tracker</h2>
@@ -39,7 +39,7 @@
               </select>
             </li>
             <li>
-              <a href="/index">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/about-us">About</a>
@@ -82,6 +82,15 @@
       </h3>
 
       <div class="accordion">
+        <!-- Display message if there are no serach results -->
+        <% if(faqs.length === 0) {%> 
+          <h3>No questions found with that search...</h3>
+          <% } %> 
+        <!-- Display message if there no FAQs in the Database-->
+        <% if(!faqs) {%> 
+          <h3>Nothing here</h3>
+          <% } %> 
+          <!-- Render Acordian Item -->
         <% faqs.map((faq, idx) =>{ %>
         <div
           class="accordion-item <% if(faqs.length-1 === idx){ %> border <% } %>"

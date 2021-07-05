@@ -19,7 +19,7 @@
   <body>
     <div class="header">
       <div class="navbar">
-        <a class="navbar-brand" href="/index">
+        <a class="navbar-brand" href="/">
           <!-- inline block align top left -->
           <img src="images/faq/fire_logo.png" alt="" />
           <h2 class="logo">Fire Tracker</h2>
@@ -39,7 +39,7 @@
               </select>
             </li>
             <li>
-              <a href="/index">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a class="active" href="/about-us">About</a>
@@ -58,7 +58,7 @@
     <main style="max-width: 960px; margin-left: auto; margin-right: auto;">
         <!-- Render Production Error -->
       <% if(process.env.NODE_ENV === 'production'){ %>
-      <h1><%= statusCode %> Error</h1>
+      <h1>An error occurred</h1>
       <h3><%= message %></h3>
       <% } %> 
 
@@ -70,7 +70,7 @@
       <h4></h4>
       <% } %>
       <p>Click the home button or try going back to the previous page</p>
-      <form action="/index">
+      <form action="/">
         <input class="home-button" type="submit" value="Home" />
       </form>
     </main>

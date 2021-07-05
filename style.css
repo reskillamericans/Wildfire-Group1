@@ -27,7 +27,7 @@ header {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -128,14 +128,10 @@ header {
 #fire-fighter {
     background-image: url(/images/landingpage-images/main-image.svg);
     height: 700px;
-    width: 1350px;
 }
 
 
 #fire-fighter h1 {
-/* position: absolute;
-left: 300px;
-bottom: 450px; */
 padding-top: 200px;
 padding-left: 100px;
 color: white;;
@@ -147,7 +143,7 @@ letter-spacing: 0.1em;
 }
 
 #fire-fighter p {
-width: 313px;
+
 padding-left: 100px;
 color: white;
 font-size: 21px;
@@ -177,11 +173,8 @@ letter-spacing: 0.07em;
 }
 
 .water-drop img {
-    /* position: relative; */
     width: 506px;
     height: 506px;
-    /* left: 200px;
-    top: 30px; */
 }
 
 .bottom-text {
@@ -204,7 +197,7 @@ letter-spacing: 0.07em;
 
 .features {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-bottom: 50px;
     
     
@@ -219,8 +212,7 @@ letter-spacing: 0.07em;
 }
 
 .features img {
-    height: 700px;
-    padding: 0px 30px;
+    width: 100%;
 }
 
 .app-store {
@@ -254,68 +246,68 @@ font-size: 18px;
 }
 
 
-/*----------------footer--------------*/
+/*---------------Footer-------------------*/
 
-footer{ 
+ footer{ 
     background-color:var(--offwhite);
-    border-top:1px solid var(--light-gray);
+    border-top: 1px solid var(--verylightgray);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .footer-container{ 
-    display:flex;
-    justify-content:center;
-    padding:1em;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
 }
 
 .subscribe{ 
-    font-size:21px;
-    font-weight:400;
+    font-size: 21px;
+    font-weight: 400;
 }
 
 .newsletter,.subscribe{ 
-    color:var(--dark-gray);
+    color:var(--gray);
 }
 
 #newsletter-email{
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid var(--dark-gray);
+    border-bottom: 1px solid var(--gray);
     background-color: var(--offwhite);
     width: 50%;
-    color: var(--very-light-gray);
+    color: var(--verylightgray);
     letter-spacing: -0.2px;  
 }
 
 #newletter-email:hover{ 
-    border:2px solid var(--orange);
+    border: 2px solid var(--orange);
 }
 
-
 button{ 
-    background-color:var(--orange);
-    border:none; 
-    border-radius:5px; 
-    color:var(--white);
-    padding:5px; 
-    width:120px;
-    margin:5px;
+    background-color: var(--orange);
+    border: none; 
+    border-radius: 5px; 
+    color: var(--white);
+    padding: 5px; 
+    width: 120px;
+    margin: 5px;
 }
 
 button:hover{ 
-    color:var(--orange); 
-    background-color:var(--white);
-    border:2px solid var(--orange);
+    color: var(--orange); 
+    background-color: var(--white);
+    border: 2px solid var(--orange);
 }
 
 .right-panel{ 
-    margin-top:2em;
-    padding-left:15px;
+    margin-top: 2em;
+    padding-left: 15px;
 }
 
 .right-panel p{ 
-    text-align:right;
-    color:var(--dark-gray);
+    text-align: right;
+    color: var(--gray);
 }
 
 .social-icons{ 
@@ -325,28 +317,23 @@ button:hover{
 }
 
 .social-icons a{ 
-    background-color:var(--orange);
-    padding:10px;
-    border-radius:50%;
-    color:white;
-    margin-right:5px;
+    background-color: var(--orange);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    margin-right: 5px;
 }
 
 .social-icons a{ 
-    padding-left:15px;
-    padding-right:15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .social-icons a:hover{ 
-    background-color:var(--white);
-    color:var(--orange);
-    border:2px solid var(--orange);
+    background-color: var(--white);
+    color: var(--orange);
+    border: 2px solid var(--orange);
 }
-
-
-
-
-
 
 
 /*-----------------media queries--------------*/ 
@@ -354,14 +341,10 @@ button:hover{
 
 @media(max-width:768px){ 
 
-.container {
-    width: 90%;
-}
 
 
 #fire-fighter {
     background-position: center;
-    width: 100%;
 }
 
 
@@ -372,7 +355,7 @@ button:hover{
 }
 
 .water-drop img {
-    padding-left: 70px;
+    padding-left: 90px;
     width: 506px;
     height: 506px;
 }
@@ -514,7 +497,7 @@ h2 {
 @media(max-width:500px){ 
  
     .water-drop img {
-        padding-left: 20px;
+        padding-left: 80px;
         width: 306px;
         height: 306px;
     }
@@ -535,18 +518,14 @@ h2 {
     }
         
     
-    .navbar a { 
+
+
+.navbar a { 
         padding: 0rem;
         margin: .15rem;
         
     }
     
-    
-    .navbar-nav {
-        padding: 0;
-        margin: .2rem;
-    
-    }
     
         
     h2 {

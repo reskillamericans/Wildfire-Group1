@@ -86,6 +86,10 @@
         <% if(faqs.length === 0) {%> 
           <h3>No questions found with that search...</h3>
           <% } %> 
+        <!-- Display message if there no FAQs in the Database-->
+        <% if(!faqs) {%> 
+          <h3>Nothing here</h3>
+          <% } %> 
           <!-- Render Acordian Item -->
         <% faqs.map((faq, idx) =>{ %>
         <div

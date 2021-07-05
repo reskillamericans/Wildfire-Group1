@@ -19,7 +19,7 @@
   <body>
     <div class="header">
       <div class="navbar">
-        <a class="navbar-brand" href="/index">
+        <a class="navbar-brand" href="/">
           <!-- inline block align top left -->
           <img src="images/faq/fire_logo.png" alt="" />
           <h2 class="logo">Fire Tracker</h2>
@@ -39,7 +39,7 @@
               </select>
             </li>
             <li>
-              <a href="/index">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/about-us">About</a>
@@ -63,7 +63,8 @@
           <input <% if(search){ %>
 
           value=<%= search %> 
-          <% } %> 
+          
+          <% } %>
           name="search" 
           type="search"
           placeholder="What would you like to know?" class="search-field" />

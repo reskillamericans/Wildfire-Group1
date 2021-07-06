@@ -15,14 +15,6 @@
 
     },
     {
-        "firstName": "Destiny",
-        "lastName": "Aigbe",
-        "role": "Backend - Node.js",
-        "imageUrl": "www.pic.com"
-        
-    
-    },
-    {
         "firstName": "Jennifer",
         "lastName": "Berry",
         "role": "Design",
@@ -87,14 +79,6 @@
     {
         "firstName": "Doug",
         "lastName": "Sturdivant",
-        "role": "Mobile - Flutter",
-        "imageUrl": "www.pic.com"
-        
-    
-    },
-    {
-        "firstName": "TK",
-        "lastName": "Green",
         "role": "Mobile - Flutter",
         "imageUrl": "www.pic.com"
         

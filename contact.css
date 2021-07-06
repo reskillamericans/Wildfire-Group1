@@ -61,7 +61,9 @@ body {
     text-align: center;
     padding: 16px 0x;
     text-decoration: none;
-    display: inline-flex;
+    display: -webkit inline-box; /*added*/
+    display: -ms inline-flexbox; /*added*/
+    display: inline-flex; /*added*/
     margin-right: 2.5rem;
     font-weight: 700;
     font-size: .9rem;
@@ -84,6 +86,7 @@ body {
   .navbar a:hover {
     color: #FF624D;
   }
+
   
 .navbar-brand img {
     display: inline-block;
@@ -111,6 +114,7 @@ body {
 }
 
 .dropdown {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-right: 3.5rem;
     font: 'Open Sans';
@@ -415,7 +419,7 @@ button:hover{
 
 @media (max-width: 677px) {
     body {
-       margin-top: 30px;
+       padding-top: 3em; /*added*/
     }
 
     .dropdown {
@@ -447,7 +451,7 @@ button:hover{
     }*/
 
     .container {
-        width: 75%;
+        width: 100%;
         position: relative;
         margin-left: 15px;
         margin-right: 15px;
@@ -472,11 +476,11 @@ button:hover{
     }
 
     #dropdown {
-        width: 120%; /*added*/
+        width: 100%; /*added*/
     }
     textarea {
         height: 430px;
-        width: 120%; /*added*/
+        width: 100%; /*added*/
     }
 
     #submit-btn {
@@ -543,14 +547,14 @@ button:hover{
             background-color: var(--offwhite);
             margin-top: auto;
         }
-
-
+    
           /*---added to make header & footer responsive----*/
 
         .navbar a:hover {
             color: #FF624D;
           }
 
+        
           #submit-btn:hover {
             background-color: var(--white);
             color: var(--orange);
@@ -574,7 +578,6 @@ button:hover{
     @media(max-width:400px){ 
 
             .navbar a { 
-               
                 padding-left: .35rem;
                 font-size: .75rem;
             }
@@ -585,22 +588,6 @@ button:hover{
             
             #language {
                 font-size: .75rem;
-                }
-
-                .main-header {
-                    font-size: 31px;
-                }
-
-                #name-label, #email-label, #number-label, #subject-label, #message-label {
-                    font-size: 16px;
-                }
-
-                .subheading {
-                    font-size: 25px;
-                }
-
-                fieldset {
-                    margin: 1em 0em; /*added*/
                 }
 
                 textarea {

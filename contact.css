@@ -25,15 +25,14 @@ html {
 
 body {
     min-height: 100%; /*changed from 100vh to 100% to eliminate white space under footer*/
-    display: flex; /*added to help eliminate white space under footer*/
+
     flex-direction: column; /*added to eliminate white space under footer*/
     margin: 0;
     padding: 0;
     background-color: var(--white);
-    position: relative;
+    position: relative; /*changed*/
     overflow-x: hidden;
-    overflow-y: scroll;
-    
+    overflow-y: scroll;   
 }
 
 /* navbar */
@@ -451,11 +450,9 @@ button:hover{
     }*/
 
     .container {
-        width: 100%;
+        width: 95%; /*changed width*/
         position: relative;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-bottom: -25px;
+        
     }
 
     #name-label, #email-label, #number-label, #subject-label, #message-label {
@@ -546,6 +543,7 @@ button:hover{
         footer {
             background-color: var(--offwhite);
             margin-top: auto;
+            margin-right: -60px; /*added to make footer fit on the screen*/
         }
     
           /*---added to make header & footer responsive----*/

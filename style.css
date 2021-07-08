@@ -556,6 +556,10 @@ footer{
                 text-align: center;
                 position: relative;
                 right: 45px;}
+
+        .features img {
+            width: 300px;
+        }
             }
 
 

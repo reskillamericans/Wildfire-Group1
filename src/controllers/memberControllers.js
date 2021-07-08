@@ -1,19 +1,15 @@
 const Member = require('../models/team_members');
 
-exports.fetchMembers = (req, res) => {
-    let conditions ={};
-    if(req.query.role){
-        conditions.role = req.query.role
+exports.fetchMembers = async (req, res, next) => {
+    try {
+        const members = await Member.find({});
+
+        res.status(200).render("about-us",{members})
+
+    } catch(err) {
+        next(err)
     }
-    console.log(conditions);
-    console.log(req.query);
-Member.find(conditions, (err, members) => {
-    if (err) {
-        return res.status(500).json({ message:err })
-    } else {
-        return res.status(200).json({ members })
-    }
-})
+
 exports.fetchSingleMember = (req, res) => {
     Member.findById(req.params.id, (err, member) =>{
         if (err){

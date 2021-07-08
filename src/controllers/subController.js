@@ -48,7 +48,7 @@ exports.createSub = async (req, res, next) => {
       "subscribed",
       "Thank you for subscribing to the Wildfire App Newsletter!"
     );
-    res.status(200).redirect("/index");
+    res.status(200).redirect("/");
   } catch (err) {
     next(err);
   }

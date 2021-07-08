@@ -8,6 +8,7 @@ const ejsMate = require("ejs-mate");
 const viewRouter = require("./routes/viewRoutes");
 const faqRouter = require("./routes/faqRoutes");
 const subRouter = require("./routes/subscriberRoutes");
+const contactRouter = require("./routes/contactRoutes");
 const memberRouter = require("./routes/memberRoutes");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./middlewares/globalErrorHandler");
@@ -39,6 +40,7 @@ app.use(flash());
 
 app.use((req, res, next) => {
   res.locals.subscribed = req.flash("subscribed");
+  res.locals.contact = req.flash("contact");
   next();
 });
 
@@ -73,12 +75,17 @@ app.use("/faq", faqRouter);
 //Subscriber routes!
 app.use("/subscribers", subRouter);
 
+//Contact Us Routes
+app.use("/", contactRouter);
+
 //Member routes
 app.use("/", memberRouter);
 
 //Unhandled Routes
 app.all("*", (req, res, next) => {
-  next(new AppError(404, `Sorry the page you are looking for cannot be found.`));
+  next(
+    new AppError(404, `Sorry the page you are looking for cannot be found.`)
+  );
 });
 
 //Global Error Handler

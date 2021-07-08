@@ -128,33 +128,41 @@
               <tr>
                 <th>Designers</th>
                 <td>
-                  Jennifer Berry <br />
-                  Raphaela Han
+                  <% members.map((member)=>{ %> 
+                    <% if(member.role.startsWith("Design")) { %> 
+                      <%= member.fullName %> <br />
+                      <% } %> 
+                  <% })  %> 
                 </td>
               </tr>
               <tr>
                 <th>Front-End Developers</th>
                 <td>
-                  Kristina Kraft <br />
-                  Ethan Leonard <br />
-                  Danielle Prioleau <br />
-                  Lauren Smalls
+                  <% members.map((member)=>{ %> 
+                    <% if(member.role.startsWith("Frontend")) { %> 
+                      <%= member.fullName %> <br />
+                      <% } %> 
+                  <% })  %> 
                 </td>
               </tr>
               <tr>
                 <th>Back-End Developers</th>
                 <td>
-                  Destiny Aigbe <br />
-                  Emmy Le <br />
-                  Alex Maldonado
+                  <% members.map((member)=>{ %> 
+                    <% if(member.role.startsWith("Backend")) { %> 
+                      <%= member.fullName %> <br />
+                      <% } %> 
+                  <% })  %> 
                 </td>
               </tr>
               <tr>
                 <th>Mobile Developers</th>
                 <td>
-                  Mohan Kolamala <br />
-                  Cecilia Ramirez <br />
-                  Doug Sturdivant
+                  <% members.map((member)=>{ %> 
+                    <% if(member.role.startsWith("Mobile")) { %> 
+                      <%= member.fullName %> <br />
+                      <% } %> 
+                  <% })  %> 
                 </td>
               </tr>
             </tbody>
@@ -211,5 +219,6 @@
         </div>
       </div>
     </footer>
+    <% console.log(members) %>
   </body>
 </html>

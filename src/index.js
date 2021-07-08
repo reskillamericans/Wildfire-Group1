@@ -8,6 +8,7 @@ const ejsMate = require("ejs-mate");
 const viewRouter = require("./routes/viewRoutes");
 const faqRouter = require("./routes/faqRoutes");
 const subRouter = require("./routes/subscriberRoutes");
+const memberRouter = require("./routes/memberRoutes");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./middlewares/globalErrorHandler");
 const port = process.env.PORT || 3000;
@@ -71,6 +72,9 @@ app.use("/faq", faqRouter);
 
 //Subscriber routes!
 app.use("/subscribers", subRouter);
+
+//Member routes
+app.use("/", memberRouter);
 
 //Unhandled Routes
 app.all("*", (req, res, next) => {

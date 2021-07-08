@@ -17,5 +17,10 @@ const memberSchema = new mongoose.Schema({
         required: true
     }
 });
+
+memberSchema.virtual("fullName").get(function(){
+    return `${this.firstName} ${this.lastName}`
+});
+
 const Member = mongoose.model('Member', memberSchema);
 module.exports = Member;

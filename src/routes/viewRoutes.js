@@ -13,8 +13,8 @@ router.get("/contact", (req, res) => {
 });
 
 //About Us Page
-router.get("/about-us", (req, res) => {
-  res.render("about-us");
-});
+//router.get("/about-us", (req, res) => {
+  //res.render("about-us");
+//});
 
 module.exports = router;

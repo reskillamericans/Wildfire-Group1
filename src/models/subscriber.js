@@ -6,7 +6,7 @@ const subscriberSchema = new mongoose.Schema(
   {
     email: {
       type: String,
-      required: [true, "Subscriber must have an email!"],
+      required: [true, "Subscriber must have an email."],
       trim: true,
       unique: true,
       validate: [validator.isEmail, "Please provide a valid email"],

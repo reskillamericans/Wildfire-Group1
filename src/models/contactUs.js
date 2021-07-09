@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { schema } = mongoose;
 const validator = require("validator");
+const AppError = require("../utils/appError");
 
 const contactSchema = new mongoose.Schema(
   {
@@ -19,16 +20,17 @@ const contactSchema = new mongoose.Schema(
     phoneNumber: {
       type: String,
       trim: true,
-      validate: [
-        validator.isMobilePhone,
-        "Please provide a valide phone number",
-      ],
     },
     subject: {
-        type: String,
-        required: [true, 'Please provide a subject'],
-        trim: true,
-        enum: ['customer service', 'technical support', 'complaints/concerns', 'Other']
+      type: String,
+      required: [true, "Please provide a subject"],
+      trim: true,
+      enum: [
+        "customer service",
+        "technical support",
+        "complaints/concerns",
+        "Other",
+      ],
     },
     message: {
       type: String,
@@ -38,5 +40,14 @@ const contactSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+//Validate phoneNumber only if phoneNumber exists
+contactSchema.pre("save", function (next) {
+  if (this.phoneNumber && !validator.isMobilePhone(this.phoneNumber)) {
+    return next(new AppError(404, "Please provide a valid phone number"));
+  }
+
+  next();
+});
 
 module.exports = mongoose.model("Contact", contactSchema);

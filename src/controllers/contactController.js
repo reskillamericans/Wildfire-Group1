@@ -28,7 +28,7 @@ exports.createContact = async (req, res, next) => {
       message: req.body.message,
     });
 
-    //Send admin email
+    // Send admin email
     await sendEmail({
       email: process.env.EMAIL_ADMIN,
       subject: `New contact us message. Subject: ${req.body.subject}`,

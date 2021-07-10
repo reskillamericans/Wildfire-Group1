@@ -193,7 +193,7 @@ letter-spacing: 0.07em;
 }
 
 #smaller {
-    font-size: 10px;
+    font-size: 15px;
     line-height: 20px; 
     margin-left: 400px;
     padding-bottom: 50px;
@@ -202,9 +202,27 @@ letter-spacing: 0.07em;
 .features {
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 50px;
+    padding:2em;
     
     
+} 
+
+.features-3{ 
+   padding-left:10px; 
+}
+
+.features h3{ 
+   display:inline-block;
+   
+}
+
+.features i{ 
+    color:white; 
+    background-color:var(--orange); 
+    padding:7px; 
+    border-radius:50%; 
+    float:left;
+    margin:10px;
 }
 
 .features-text {
@@ -215,8 +233,13 @@ letter-spacing: 0.07em;
     padding-bottom: -30px;
 }
 
+.features p{ 
+    margin-bottom:50px;
+}
+
 .features img{
    height:450px;
+   padding:10px;
 }
 
 .app-store {
@@ -224,6 +247,7 @@ letter-spacing: 0.07em;
     display: flex;
     justify-content: space-evenly;
     border-radius: 15px;
+    padding:1em;
 }
 
 .app-text {
@@ -246,10 +270,50 @@ font-size: 18px;
 
 }
 
-.app-img img {
-   height:450px;
+.app-img{ 
+    display:flex;
+    align-items:center;  
+
 }
 
+.mobile-apple{ 
+    margin:50px;
+}
+
+.phone-box{ 
+    background-color:black;
+    color:white;
+    width:160px;
+    border-radius:7px;
+    padding:5px;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-content:flex-end;
+    line-height:5px;
+    margin:10px;
+    
+} 
+
+.box-samsung, .box-apple{ 
+    margin-left:25px;
+}
+
+.box-apple{ 
+    margin-top:45px;
+}
+
+.phone-box img{ 
+    height:35px;
+    padding:7px;
+    margin-right:5px;
+    
+} 
+
+
+.bold{ 
+    font-weight:bold;
+}
 
 /*---------------Footer-------------------*/
 
@@ -428,11 +492,15 @@ button:hover{
     text-align: center;
 }
 
-.app-store img {
+.app-img{ 
+    flex-direction:column;
+}
+
+/*.app-store img {
     width: 500px;
     height: 500px;
     padding-left: 50px;
-}
+}*/
 
 
 
@@ -542,6 +610,10 @@ footer{
     text-align:center;
 }
 
+.phone-box img{ 
+     height:30px;
+ } 
+
 }
 
 @media(max-width:500px){ 
@@ -609,8 +681,7 @@ footer{
             #fire-fighter h1 {
                 text-align: center;
                 position: relative;
-                right: 35px;
-                
+                width:290px;
                 
             }
 
@@ -633,4 +704,25 @@ footer{
                 font-size:18px;
             }
 
+            .mobile-apple img, .mobile-samsung img{ 
+                height:350px;
+                width:200px;
+            }
+
+            .phone-box{ 
+                margin-left:60px;
+               
+                
+                
+            }
+
+            .phone-box img{ 
+                height:30px;
+            } 
+            
+            .box-apple img{ 
+                margin-top:10px;
+            }
+
+           
     }

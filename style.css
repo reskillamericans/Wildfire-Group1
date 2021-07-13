@@ -598,7 +598,14 @@ footer{
     padding-left: 50px;
 }
    
+.phone-box{ 
+    margin-left:150px;
+}
 
+.phone-box img{ 
+    height:30px;
+    width:35px;        
+} 
 
 .footer-container{ 
     flex-direction:column;
@@ -627,7 +634,15 @@ footer{
      height:30px;
  } 
 
+} 
+
+@media(max-width:674px){ 
+    .phone-box img{ 
+        height:30px;
+        width:35px;        
+    } 
 }
+
 
 @media(max-width:500px){ 
  

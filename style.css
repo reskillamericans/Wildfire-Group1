@@ -22,17 +22,13 @@ body {
 
 }
 
-header {
-    background-color: var(--offwhite);
-}
-
 .container {
     width: 100%;
     margin: auto;
 }
 
-/* Navbar */
-
+/*--------------header---------------*/ 
+/* The navigation bar */
 .navbar {
     overflow: hidden;
     background-color: #F9F9F9;
@@ -121,7 +117,6 @@ header {
     outline: none;
     
 }
-
 
 /* Body */
 
@@ -247,12 +242,12 @@ letter-spacing: 0.07em;
     display: flex;
     justify-content: space-evenly;
     border-radius: 15px;
-    padding:1em;
+    padding: 1em;
 }
 
 .app-text {
-color: white;
-margin-top:3em;
+    color: white;
+    margin:5em;
 }
 
 .app-text h3 {
@@ -265,8 +260,8 @@ margin-top:3em;
 }
 
 .app-text p {
-margin-top:10px ;
-font-size: 18px;
+    margin-top:3em ;
+    font-size: 18px;
 
 }
 
@@ -280,12 +275,22 @@ font-size: 18px;
     margin:50px;
 }
 
+.android-box{ 
+   margin-top:20px; 
+   margin-left:50px;
+}
+
+.apple-box{ 
+    margin-top:45px;
+    margin-left:30px;
+}
+
+
 .phone-box{ 
-    background-color:black;
+    background-color:#2D3436;
     color:white;
     width:160px;
     border-radius:7px;
-    padding:5px;
     text-align:center;
     display:flex;
     justify-content:center;
@@ -297,6 +302,10 @@ font-size: 18px;
 
 .box-samsung, .box-apple{ 
     margin-left:25px;
+}
+
+.box-apple img, .box-samsung img{ 
+    margin-top:5px;
 }
 
 .box-apple{ 
@@ -410,33 +419,33 @@ button:hover{
 
 @media(max-width:768px){ 
 
-    .float-right {
-        float: none; 
-     }
-       
-     
-    h2 {
-        margin-top: 6rem;
-    }
-    
-    
-    .navbar-nav {
-        margin-right: 0rem;
-        margin-top: 0;
-        padding: 0;
-        margin-left: 1.5rem;
-            
-    }
-    
-    .dropdown {
-         margin-left: .25rem;
-    }
-    
+.float-right {
+    float: none; 
+ }
+   
+ 
+h2 {
+    margin-top: 6rem;
+}
+
+
+.navbar-nav {
+    margin-right: 0rem;
+    margin-top: 0;
+    padding: 0;
+    margin-left: 1.5rem;
+        
+}
+
+.dropdown {
+     margin-left: .25rem;
+}
+
 
 
 #fire-fighter {
     background-position: center;
-    
+    padding:20px;
 }
 
 .sub-heading{ 
@@ -449,7 +458,7 @@ button:hover{
 }
 
 .bottom-text{ 
-    margin-top:50px;
+    margin-top:20px;
 }
 
 #smaller{ 
@@ -469,7 +478,7 @@ button:hover{
 }
 
 .water-drop img {
-    padding-left: 90px;
+    padding-left: 120px;
     width: 506px;
     height: 506px;
 }
@@ -483,8 +492,17 @@ button:hover{
     align-items: center;
 }
 
+.features i{ 
+    padding:12px;
+}
+
 .features img{ 
     max-height:650px;
+    
+}
+
+.app-text{ 
+    text-align:center;
 }
 
 .app-store {
@@ -496,22 +514,16 @@ button:hover{
     flex-direction:column;
 }
 
+.apple-phone, .samsung-phone{ 
+    border:1px solid #089285;
+}
+
 /*.app-store img {
     width: 500px;
     height: 500px;
     padding-left: 50px;
 }*/
 
-
-
-
-.navbar a { 
-    margin: 0;
-}
-
-.dropdown {
-    margin-right: .5rem;
-}
 
 footer{ 
     margin-top:1em;
@@ -544,7 +556,7 @@ footer{
 @media(max-width:678px){ 
 
     body{ 
-        padding-top:3em;
+        padding-top:3em; /*added*/
     }
        
     .dropdown {
@@ -610,6 +622,7 @@ footer{
     text-align:center;
 }
 
+
 .phone-box img{ 
      height:30px;
  } 
@@ -625,9 +638,9 @@ footer{
     }
 
     .app-store img {
-        width: 250px;
-        height: 250px;
-        padding-left: 40px;
+        
+        
+        padding-left: 0px;
     }
     
     #smaller {
@@ -642,7 +655,29 @@ footer{
     
 
     }
-    
+
+    @media(max-width:470px){ 
+
+        #language {
+            padding: .2rem; 
+        }
+            
+        
+        .navbar a { 
+            padding: 0rem;
+            margin: .15rem;
+            
+        }
+        
+        
+        .navbar-nav {
+            padding: 0;
+            margin: .2rem;
+        
+        }
+    }
+
+
     @media(max-width:450px) {
 
         .water-drop img {
@@ -652,7 +687,7 @@ footer{
         #fire-fighter h1 {
             text-align: center;
             position: relative;
-            right: 45px;}
+            right: 65px;}
 
             #fire-fighter p {
                 text-align: center;
@@ -662,67 +697,104 @@ footer{
 
 
 
-    @media(max-width:400px){ 
+@media(max-width:400px){ 
 
-        .navbar a { 
-            padding-left: .35rem;
-            font-size: .75rem;
-        }
         
-        .dropdown {
-            font-size: .75rem;
-        
-        }
-        
-        #language {
-            font-size: .75rem;
-            }
+.navbar a { 
+    padding-left: .35rem;
+    font-size: .75rem;
+}
 
-            #fire-fighter h1 {
-                text-align: center;
-                position: relative;
-                width:290px;
+.dropdown {
+    font-size: .75rem;
+
+}
+
+#language {
+    font-size: .75rem;
+    }
+    
+.banner-right img{ 
+    padding:0;
+}
+
+
+#fire-fighter{ 
+    padding:5px;
+}
+
+ #fire-fighter h1 {
+     padding-top:100px;
+    text-align: center;
+    position: relative;
+    width:290px;
                 
-            }
+}
 
-            #fire-fighter p {
-                text-align: center;
-                position: relative;
-                right: 35px;
-                
-                
-            }
+#fire-fighter p {
+    text-align: center;
+    position: relative;
+    right: 45px; 
+}
 
-            .water-drop img {
-                padding-left: 35px;
-                width: 306px;
-                height: 306px;
-            } 
+.water-drop img {
+    padding-left: 35px;
+    width: 306px;
+    height: 306px;
+} 
 
-            .sub-heading p{ 
-                padding:5px;
-                font-size:18px;
-            }
+.sub-heading p{ 
+    padding:5px;
+    font-size:16px;
+    line-height:25px;
+}
 
-            .mobile-apple img, .mobile-samsung img{ 
-                height:350px;
-                width:200px;
-            }
+.features { 
+    text-align:center;
+}
 
-            .phone-box{ 
-                margin-left:60px;
-               
-                
-                
-            }
+.top{ 
+    float:none;
+    display:block !important;   
+    
+    
+}
 
-            .phone-box img{ 
-                height:30px;
-            } 
+.features i { 
+   float:none;
+    text-align:center; 
+    padding:15px;
+   
+}
+
+
+.features-text{ 
+    padding-right:0px;
+}
+
+.app-text{ 
+    margin:3em;
+}
+
+.mobile-apple img, .mobile-samsung img{ 
+    height:450px;
+    width:250px;
+}
+/*
+.apple-box{ 
+    margin-top:15px;
+}*/
+
+ 
+ .phone-box{ 
+    margin-left:50px;
+              
+}
+
+.phone-box img{ 
+    height:30px;
+    width:35px;        
+} 
             
-            .box-apple img{ 
-                margin-top:10px;
-            }
-
            
     }

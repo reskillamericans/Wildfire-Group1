@@ -275,16 +275,6 @@ letter-spacing: 0.07em;
     margin:50px;
 }
 
-.android-box{ 
-   margin-top:20px; 
-   margin-left:50px;
-}
-
-.apple-box{ 
-    margin-top:45px;
-    margin-left:30px;
-}
-
 
 .phone-box{ 
     background-color:#2D3436;
@@ -312,12 +302,18 @@ letter-spacing: 0.07em;
     margin-top:45px;
 }
 
+
 .phone-box img{ 
     height:35px;
     padding:7px;
     margin-right:5px;
     
 } 
+
+
+.app-img a{ 
+    text-decoration:none;
+}
 
 
 .bold{ 

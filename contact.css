@@ -576,7 +576,7 @@ button:hover{
     }
 }
        
-    @media(max-width:400px){ 
+    @media(max-width:400px) {
 
             .navbar a { 
                 padding-left: .35rem;

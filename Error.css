@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{ 
+    --orange: #FF624C;
+    --light-gray: #C3C7D2;
+    --dark-gray: #7E7A8F;
+    --medium-gray:#EDEFF2;
+    --very-light-gray:#e5e5e5; 
+    --offwhite:#F9F9F9;
+    --white: #FFFFFF;
+    --green: #089285;
+    --blue:#7288a2;
+}
+
+
+body{ 
+    font-family: 'Open Sans';
+    margin: 0 ;
+    padding:0;
+    
+  }
+
+
+/*--------------main---------------*/ 
+main{ 
+    margin:9em auto;
+    text-align:center;
+}
+
+p{ 
+    color:var(--dark-gray);
+}
+
+.home-button{ 
+    background-color: var(--orange);
+    color:white;
+    border:none; 
+    border-radius:5px; 
+    padding:7px; 
+    width:15em;
+    margin-top:5px;
+
+}
+
+.home-button:hover{
+color:var(--orange); 
+background-color:var(--white);
+border:2px solid var(--orange);
+}
+
+
+@media(max-width:768px){ 
+   
+   html{ 
+       height:100%;
+   }
+
+    body{ 
+       min-height:100%;
+   }
+   
+}

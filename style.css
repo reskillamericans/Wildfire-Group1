@@ -22,17 +22,13 @@ body {
 
 }
 
-header {
-    background-color: var(--offwhite);
-}
-
 .container {
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
-/* Navbar */
-
+/*--------------header---------------*/ 
+/* The navigation bar */
 .navbar {
     overflow: hidden;
     background-color: #F9F9F9;
@@ -122,20 +118,19 @@ header {
     
 }
 
-
 /* Body */
 
 #fire-fighter {
-    background-image: url(/images/landingpage-images/main-image.svg);
+    background: url(/images/landingpage-images/main-image.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     height: 700px;
-    width: 1350px;
 }
 
 
 #fire-fighter h1 {
-/* position: absolute;
-left: 300px;
-bottom: 450px; */
 padding-top: 200px;
 padding-left: 100px;
 color: white;;
@@ -147,7 +142,7 @@ letter-spacing: 0.1em;
 }
 
 #fire-fighter p {
-width: 313px;
+
 padding-left: 100px;
 color: white;
 font-size: 21px;
@@ -177,11 +172,8 @@ letter-spacing: 0.07em;
 }
 
 .water-drop img {
-    /* position: relative; */
     width: 506px;
     height: 506px;
-    /* left: 200px;
-    top: 30px; */
 }
 
 .bottom-text {
@@ -196,7 +188,7 @@ letter-spacing: 0.07em;
 }
 
 #smaller {
-    font-size: 10px;
+    font-size: 15px;
     line-height: 20px; 
     margin-left: 400px;
     padding-bottom: 50px;
@@ -204,10 +196,28 @@ letter-spacing: 0.07em;
 
 .features {
     display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
+    justify-content: space-evenly;
+    padding:2em;
     
     
+} 
+
+.features-3{ 
+   padding-left:10px; 
+}
+
+.features h3{ 
+   display:inline-block;
+   
+}
+
+.features i{ 
+    color:white; 
+    background-color:var(--orange); 
+    padding:7px; 
+    border-radius:50%; 
+    float:left;
+    margin:10px;
 }
 
 .features-text {
@@ -218,9 +228,13 @@ letter-spacing: 0.07em;
     padding-bottom: -30px;
 }
 
-.features img {
-    height: 700px;
-    padding: 0px 30px;
+.features p{ 
+    margin-bottom:50px;
+}
+
+.features img{
+   height:450px;
+   padding:10px;
 }
 
 .app-store {
@@ -228,15 +242,17 @@ letter-spacing: 0.07em;
     display: flex;
     justify-content: space-evenly;
     border-radius: 15px;
+    padding: 1em;
 }
 
 .app-text {
-color: white;
+    color: white;
+    margin:5em;
 }
 
 .app-text h3 {
     font-size: 28px;
-    padding-top: 120px;
+   
 }
 
 .app-text h4 {
@@ -244,78 +260,128 @@ color: white;
 }
 
 .app-text p {
-padding-top: 80px;
-font-size: 18px;
+    margin-top:3em ;
+    font-size: 18px;
 
 }
 
-.app-img img {
-    padding-right: 50px;
+.app-img{ 
+    display:flex;
+    align-items:center;  
+
+}
+
+.mobile-apple{ 
+    margin:50px;
 }
 
 
-/*----------------footer--------------*/
+.phone-box{ 
+    background-color:#2D3436;
+    color:white;
+    width:160px;
+    border-radius:7px;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-content:flex-end;
+    line-height:5px;
+    margin:10px;
+    
+} 
 
-footer{ 
+.box-samsung, .box-apple{ 
+    margin-left:25px;
+}
+
+.box-apple img, .box-samsung img{ 
+    margin-top:5px;
+}
+
+.box-apple{ 
+    margin-top:45px;
+}
+
+
+.phone-box img{ 
+    height:35px;
+    padding:7px;
+    margin-right:5px;
+    
+} 
+
+
+.app-img a{ 
+    text-decoration:none;
+}
+
+
+.bold{ 
+    font-weight:bold;
+}
+
+/*---------------Footer-------------------*/
+
+ footer{ 
     background-color:var(--offwhite);
-    border-top:1px solid var(--light-gray);
+    border-top: 1px solid var(--verylightgray);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .footer-container{ 
-    display:flex;
-    justify-content:center;
-    padding:1em;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
 }
 
 .subscribe{ 
-    font-size:21px;
-    font-weight:400;
+    font-size: 21px;
+    font-weight: 400;
 }
 
 .newsletter,.subscribe{ 
-    color:var(--dark-gray);
+    color:var(--gray);
 }
 
 #newsletter-email{
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid var(--dark-gray);
+    border-bottom: 1px solid var(--gray);
     background-color: var(--offwhite);
     width: 50%;
-    color: var(--very-light-gray);
+    color: var(--verylightgray);
     letter-spacing: -0.2px;  
 }
 
 #newletter-email:hover{ 
-    border:2px solid var(--orange);
+    border: 2px solid var(--orange);
 }
 
-
 button{ 
-    background-color:var(--orange);
-    border:none; 
-    border-radius:5px; 
-    color:var(--white);
-    padding:5px; 
-    width:120px;
-    margin:5px;
+    background-color: var(--orange);
+    border: none; 
+    border-radius: 5px; 
+    color: var(--white);
+    padding: 5px; 
+    width: 120px;
+    margin: 5px;
 }
 
 button:hover{ 
-    color:var(--orange); 
-    background-color:var(--white);
-    border:2px solid var(--orange);
+    color: var(--orange); 
+    background-color: var(--white);
+    border: 2px solid var(--orange);
 }
 
 .right-panel{ 
-    margin-top:2em;
-    padding-left:15px;
+    margin-top: 2em;
+    padding-left: 15px;
 }
 
 .right-panel p{ 
-    text-align:right;
-    color:var(--dark-gray);
+    text-align: right;
+    color: var(--gray);
 }
 
 .social-icons{ 
@@ -325,28 +391,23 @@ button:hover{
 }
 
 .social-icons a{ 
-    background-color:var(--orange);
-    padding:10px;
-    border-radius:50%;
-    color:white;
-    margin-right:5px;
+    background-color: var(--orange);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    margin-right: 5px;
 }
 
 .social-icons a{ 
-    padding-left:15px;
-    padding-right:15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .social-icons a:hover{ 
-    background-color:var(--white);
-    color:var(--orange);
-    border:2px solid var(--orange);
+    background-color: var(--white);
+    color: var(--orange);
+    border: 2px solid var(--orange);
 }
-
-
-
-
-
 
 
 /*-----------------media queries--------------*/ 
@@ -354,16 +415,57 @@ button:hover{
 
 @media(max-width:768px){ 
 
-.container {
-    width: 90%;
+.float-right {
+    float: none; 
+ }
+   
+ 
+h2 {
+    margin-top: 6rem;
 }
+
+
+.navbar-nav {
+    margin-right: 0rem;
+    margin-top: 0;
+    padding: 0;
+    margin-left: 1.5rem;
+        
+}
+
+.dropdown {
+     margin-left: .25rem;
+}
+
 
 
 #fire-fighter {
     background-position: center;
-    width: 100%;
+    padding:20px;
 }
 
+.sub-heading{ 
+    font-size:25px;
+}
+
+.sub-heading p{ 
+    font-size:20px;
+    line-height:25px;
+}
+
+.bottom-text{ 
+    margin-top:20px;
+}
+
+#smaller{ 
+    font-size:15px;
+}
+
+#bigger{ 
+    max-width:400px;
+    margin:0 auto;
+    
+} 
 
 .water-drop {
     flex-direction: column;
@@ -372,120 +474,56 @@ button:hover{
 }
 
 .water-drop img {
-    padding-left: 70px;
+    padding-left: 120px;
     width: 506px;
     height: 506px;
 }
 
+.water-text{ 
+    padding-top:10px;
+}
 
 .features {
     flex-direction: column;
     align-items: center;
 }
 
+.features i{ 
+    padding:12px;
+}
+
+.features img{ 
+    max-height:650px;
+    
+}
+
+.app-text{ 
+    text-align:center;
+}
 
 .app-store {
     flex-direction: column;
     text-align: center;
 }
 
-.app-store img {
+.app-img{ 
+    flex-direction:column;
+}
+
+.apple-phone, .samsung-phone{ 
+    border:1px solid #089285;
+}
+
+/*.app-store img {
     width: 500px;
     height: 500px;
     padding-left: 50px;
+}*/
+
+
+footer{ 
+    margin-top:1em;
 }
-
-
-
-
-.navbar a { 
-    margin: 0;
-}
-
-.dropdown {
-    margin-right: .5rem;
-}
-
-
-.network-credit{ 
-    float:none;
-} 
-
-.networks{ 
-    display:block; 
-} 
-
-
-.team-info{ 
-    flex-direction: column;
-    align-items:center;
-    padding:0;
-} 
-
-.team-info img{ 
-    padding-bottom: 1em;
-} 
-
-}
-
-@media(max-width:678px){ 
-
-.water-drop img {
-    padding-left: 70px;
-    width: 406px;
-    height: 406px;
-}
-
-
-.app-store img {
-    width: 450px;
-    height: 450px;
-    padding-left: 50px;
-}
-   
-.dropdown {
-    margin-right: 0;
-}
-
-.navbar-nav {
-    margin-right: 0;
-    padding: 0;
-}
-
-.navbar a { 
-    padding: .3rem;
-
-}
-
-.navbar-brand img {
-    margin-left: .5rem;
-}
-
-h2 {
-    margin-top: 2.5rem;
-    margin-bottom: 0rem;
-}  
-    
-.top h1{ 
-    margin-bottom:1.5em;
-    font-size: 20px;
-}
-
-.banner{ 
-    flex-direction:column;
-    align-items:center;
-    
-}
-
-.banner-left img{ 
-    height:28px;
-}
-
-.banner-right img{ 
-    max-width:160px;
-    padding-left:2em;
-    margin-top:10px;
-} 
 
 .footer-container{ 
     flex-direction:column;
@@ -511,18 +549,109 @@ h2 {
 
 }
 
+@media(max-width:678px){ 
+
+    body{ 
+        padding-top:3em; /*added*/
+    }
+       
+    .dropdown {
+        margin-right: 0;
+    }
+    
+    .navbar-nav {
+        margin-right: 0;
+        padding: 0;
+    }
+    
+    .navbar a { 
+        padding: .1rem;
+        margin: .5rem;
+    
+    }
+    
+    .navbar-brand img {
+        
+        margin-left: .5rem;
+        
+    }
+    
+    h2 {
+        margin-top: 2.5rem;
+        margin-bottom: 0rem;
+    }    
+
+.water-drop img {
+    padding-left: 70px;
+    width: 406px;
+    height: 406px;
+}
+
+
+.app-store img {
+    width: 450px;
+    height: 450px;
+    padding-left: 50px;
+}
+   
+.phone-box{ 
+    margin-left:150px;
+}
+
+.phone-box img{ 
+    height:30px;
+    width:35px;        
+} 
+
+.footer-container{ 
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.footer-container p{ 
+    font-size:12px;
+}
+
+.subscribe{ 
+    font-size:20px;
+}
+
+.social-icons{ 
+    justify-content:center;
+}
+
+.right-panel p{ 
+    text-align:center;
+}
+
+
+.phone-box img{ 
+     height:30px;
+ } 
+
+} 
+
+@media(max-width:674px){ 
+    .phone-box img{ 
+        height:30px;
+        width:35px;        
+    } 
+}
+
+
 @media(max-width:500px){ 
  
     .water-drop img {
-        padding-left: 20px;
+        padding-left: 80px;
         width: 306px;
         height: 306px;
     }
 
     .app-store img {
-        width: 250px;
-        height: 250px;
-        padding-left: 40px;
+        
+        
+        padding-left: 0px;
     }
     
     #smaller {
@@ -535,23 +664,148 @@ h2 {
     }
         
     
-    .navbar a { 
-        padding: 0rem;
-        margin: .15rem;
-        
+
     }
-    
-    
-    .navbar-nav {
-        padding: 0;
-        margin: .2rem;
-    
-    }
-    
-        
-    h2 {
-        font-size: 1.2rem;
+
+    @media(max-width:470px){ 
+
+        #language {
+            padding: .2rem; 
+        }
             
+        
+        .navbar a { 
+            padding: 0rem;
+            margin: .15rem;
+            
+        }
+        
+        
+        .navbar-nav {
+            padding: 0;
+            margin: .2rem;
+        
+        }
     }
+
+
+    @media(max-width:450px) {
+
+        .water-drop img {
+            padding-left: 40px;
+        }
+
+        #fire-fighter h1 {
+            text-align: center;
+            position: relative;
+            right: 65px;}
+
+            #fire-fighter p {
+                text-align: center;
+                position: relative;
+                right: 45px;}
+            }
+
+
+
+@media(max-width:400px){ 
+
+        
+.navbar a { 
+    padding-left: .35rem;
+    font-size: .75rem;
+}
+
+.dropdown {
+    font-size: .75rem;
+
+}
+
+#language {
+    font-size: .75rem;
     }
     
+.banner-right img{ 
+    padding:0;
+}
+
+
+#fire-fighter{ 
+    padding:5px;
+}
+
+ #fire-fighter h1 {
+     padding-top:100px;
+    text-align: center;
+    position: relative;
+    width:290px;
+                
+}
+
+#fire-fighter p {
+    text-align: center;
+    position: relative;
+    right: 45px; 
+}
+
+.water-drop img {
+    padding-left: 35px;
+    width: 306px;
+    height: 306px;
+} 
+
+.sub-heading p{ 
+    padding:5px;
+    font-size:16px;
+    line-height:25px;
+}
+
+.features { 
+    text-align:center;
+}
+
+.top{ 
+    float:none;
+    display:block !important;   
+    
+    
+}
+
+.features i { 
+   float:none;
+    text-align:center; 
+    padding:15px;
+   
+}
+
+
+.features-text{ 
+    padding-right:0px;
+}
+
+.app-text{ 
+    margin:3em;
+}
+
+.mobile-apple img, .mobile-samsung img{ 
+    height:450px;
+    width:250px;
+}
+/*
+.apple-box{ 
+    margin-top:15px;
+}*/
+
+ 
+ .phone-box{ 
+    margin-left:50px;
+              
+}
+
+.phone-box img{ 
+    height:30px;
+    width:35px;        
+} 
+            
+           
+    }

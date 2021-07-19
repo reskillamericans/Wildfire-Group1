@@ -21,13 +21,14 @@
 
 html {
     height: 100%; /*added the height to eliminate the white space under the footer*/
+    width: 100%;
 }
 
 body {
     min-height: 100%; /*changed from 100vh to 100% to eliminate white space under footer*/
 
     flex-direction: column; /*added to eliminate white space under footer*/
-    margin: 0;
+    margin: 0em;
     padding: 0;
     background-color: var(--white);
     position: relative; /*changed*/
@@ -525,6 +526,8 @@ button:hover{
         .navbar-nav {
             padding: 0;
             margin: .2rem;
+            display: flex;
+            justify-content: space-around;
         }
         
    
@@ -573,7 +576,7 @@ button:hover{
     }
 }
        
-    @media(max-width:400px){ 
+    @media(max-width:400px) {
 
             .navbar a { 
                 padding-left: .35rem;

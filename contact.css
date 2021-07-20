@@ -158,9 +158,7 @@ fieldset {
  input {
     width: 100%;
     height: 40px; /*decreased the height of input*/
-    padding: 0em 2em; /*added padding*/
     border: 1px solid var(--verylightgray);
-    border-radius: 4px;
     background-color: var(--verylightgray);
     
 }
@@ -180,10 +178,18 @@ select {
     color: #180126;
 }
 
+#message-label:placeholder-shown {
+     font-family: 'Open Sans', sans-serif;
+    font-weight:normal;
+    letter-spacing:normal;
+    font-size: 14px;
+    color: #180126;
+   
+}
+
 #dropdown {
     width: 100%; /*sligh increase to the width to match input*/
     height: 40px; /*decreased the height*/
-    padding: 0em 2em; /*added padding*/
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
     color: var(--gray); 
@@ -208,12 +214,12 @@ textarea {
     width: 100%; /*changed width to 100%*/
     box-sizing: content-box; /*added*/
     height: 320px; /*decreased the height*/
-    padding: 12px 20px;
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
     font-size: 16px;
     resize: none;
     background-color: var(--verylightgray);
+   
 }
 
 #submit-btn {
@@ -251,22 +257,29 @@ button:hover {
 
 
 /*----updated footer-------- */
+
 footer{ 
     background-color:var(--offwhite);
-    border-top: 1px solid var(--verylightgray);
+    border-top: 1px solid var(--lightgray);
     font-family: 'Open Sans', sans-serif;
-    margin-top: auto; /*added to eliminate the white space under footer*/
+    margin-top:3em;
 }
 
 .footer-container{ 
     display: flex;
     justify-content: center;
-    padding: 1em;
+    padding-left: 2em;
+    padding-right:2em;
 }
 
 .subscribe{ 
     font-size: 21px;
     font-weight: 400;
+
+}
+
+.subscribe-email{ 
+    margin-top:-25px;
 }
 
 .newsletter,.subscribe{ 
@@ -280,7 +293,7 @@ footer{
     border-bottom: 1px solid var(--gray);
     background-color: var(--offwhite);
     width: 50%;
-    color: var(--verylightgray);
+    color: var(--very-light-gray);
     letter-spacing: -0.2px;  
 }
 
@@ -295,8 +308,10 @@ button{
     color: var(--white);
     padding: 5px; 
     width: 120px;
-    margin: 5px;
-    cursor: pointer; /*added*/
+    margin:5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+   
+
 }
 
 button:hover{ 
@@ -307,19 +322,24 @@ button:hover{
 
 .right-panel{ 
     margin-top: 2em;
-    padding-left: 15px;
+    flex-basis:50%;
 }
 
-.right-panel p{ 
+.left-panel{ 
+    flex-basis:50%;
+}
+
+
+.right-panel { 
     text-align: right;
     color: var(--gray);
 }
 
-.social-icons{ 
-   
-    display:flex;
-    justify-content:flex-end;
-}
+
+
+.social-icons{
+    margin-bottom:30px;
+ }
 
 .social-icons a{ 
     background-color: var(--orange);
@@ -327,20 +347,18 @@ button:hover{
     border-radius: 50%;
     color: white;
     margin-right: 5px;
-}
-
-.social-icons a{ 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     padding-left: 15px;
     padding-right: 15px;
+    
 }
+
 
 .social-icons a:hover{ 
     background-color: var(--white);
     color: var(--orange);
     border: 2px solid var(--orange);
 }
-
-
 
 /*updated media queries*/
 @media(max-width: 768px) {
@@ -386,7 +404,7 @@ button:hover{
    }
 
    .social-icons {
-       justify-content: center;
+      text-align: center;
    }
 
    .right-panel p {
@@ -591,15 +609,37 @@ button:hover{
                 font-size: .75rem;
                 }
 
+                .container{ 
+                    margin:7em 2em;
+                }
+
                 textarea {
                     height: 430px; /*added*/
+            
+                }
+
+                #message-label:placeholder-shown{ 
+                    font-size:18px;
+                }
+
+                #name-label, #email-label, #number-label, #subject-label, #message-label{ 
+                    font-size:20px;
                 }
 
                 #submit-btn {
                     width: 80%;
+                    margin-left:2.3em;
+                    float:none;
+                }
+
+                form input, #dropdown{ 
+                    height:60px;
+                    font-size:18px;
                 }
 
 
+
+                
         /*---added to make header & footer responsive----*/
 
                 .navbar a:hover {

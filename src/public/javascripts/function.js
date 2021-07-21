@@ -1,8 +1,6 @@
-const items = document.querySelectorAll(".accordion a");
+const accordion = document.querySelector(".accordion");
 
-function toggleAccordion(){
-  this.classList.toggle('active');
-  this.nextElementSibling.classList.toggle('active');
-}
-
-items.forEach(item => item.addEventListener('click', toggleAccordion));
+accordion.addEventListener("click", (e) => {
+  e.target.classList.toggle("active");
+  e.target.nextElementSibling.classList.toggle("active");
+});

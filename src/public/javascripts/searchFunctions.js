@@ -3,7 +3,7 @@ const input = document.querySelector("input");
 let updatedContent = document.getElementById("updatedContent");
 const el = document.createElement("html");
 
-//Make input cursor active on page load
+// Make input cursor active on page load
 input.focus();
 
 let timeoutId;
@@ -16,6 +16,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
+//Function to handle input event
 function handleInputEvent(e) {
   //Prevent page reload
   e.preventDefault();
@@ -34,20 +35,17 @@ function handleInputEvent(e) {
         el.innerHTML = data;
         const content = el.querySelector("#updatedContent");
 
-        //Replace accordian content rendered from search
-        // updatedContent.innerHTML = content.innerHTML;
-
         //Fade Out Accordian Content
-
         updatedContent.animate([{ opacity: 1 }, { opacity: 0.5 }], {
           duration: 200,
           iterations: 1,
         });
 
-        //Fade In Accordian conent
         setTimeout(() => {
+          //Update content with search resutls
           updatedContent.innerHTML = content.innerHTML;
 
+          //Fade In content
           updatedContent.animate([{ opacity: 0 }, { opacity: 1 }], {
             duration: 550,
             iterations: 1,

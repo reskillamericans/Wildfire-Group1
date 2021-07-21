@@ -1,37 +1,59 @@
+const form = document.querySelector("form");
 const input = document.querySelector("input");
-const lis = document.querySelectorAll("li");
+let updatedContent = document.getElementById("updatedContent");
+const el = document.createElement("html");
 
-//Clear sessionStorage when user goes to another link
-lis.forEach((li) => {
-  li.addEventListener("click", () => {
-    sessionStorage.clear();
-  });
-});
-
-//Make sure input cursor is at the end of input text on reload
-window.onload = function () {
-  const end = input.value.length;
-  input.setSelectionRange(end, end);
-  input.focus();
-
-  //Set input.value to latest value stored in session on reload
-  input.value = sessionStorage.getItem("iVal");
-};
+//Make input cursor active on page load
+input.focus();
 
 let timeoutId;
 input.addEventListener("input", (e) => {
-  //Reload page with all FAQs when deleting input text
-  if (!e.currentTarget.value) {
-    sessionStorage.setItem("iVal", "");
-    window.location.href = `${window.location.origin}/faq`;
-  }
+  handleInputEvent(e);
+});
 
-  //Delay search query until user stops typing for one second
+form.addEventListener("submit", (e) => {
+  //Prevent page reload
+  e.preventDefault();
+});
+
+function handleInputEvent(e) {
+  //Prevent page reload
+  e.preventDefault();
+
   if (timeoutId) {
     clearTimeout(timeoutId);
   }
+
+  //Delay function until user stops typing
   timeoutId = setTimeout(() => {
-    window.location.href = `${window.location.origin}/faq?search=${input.value}`;
+    //Get request with input value
+    fetch(`/faq?search=${input.value}`)
+      .then((response) => response.text())
+      .then(function (data) {
+        //Parse HTML string
+        el.innerHTML = data;
+        const content = el.querySelector("#updatedContent");
+
+        //Replace accordian content rendered from search
+        // updatedContent.innerHTML = content.innerHTML;
+
+        //Fade Out Accordian Content
+
+        updatedContent.animate([{ opacity: 1 }, { opacity: 0.5 }], {
+          duration: 200,
+          iterations: 1,
+        });
+
+        //Fade In Accordian conent
+        setTimeout(() => {
+          updatedContent.innerHTML = content.innerHTML;
+
+          updatedContent.animate([{ opacity: 0 }, { opacity: 1 }], {
+            duration: 550,
+            iterations: 1,
+          });
+        }, 200);
+      })
+      .catch((error) => console.error(error));
   }, 1000);
-  sessionStorage.setItem("iVal", input.value);
-});
+}

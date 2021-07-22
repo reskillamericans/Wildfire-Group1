@@ -47,31 +47,31 @@
   <!---contact form-->
         <div class="container">
           <h1 class="main-header">Contact Us</h1>
-          <form id="contact_info" action="" method="post">
+          <form id="contact_info" action="/contact" method="POST">
             <fieldset>
               <label for="name" id="name-label">Full Name</label>
               <br>
-              <input type="text" id="your-name" placeholder="Enter your name" autocomplete="off" required/>
+              <input type="text" name="fullName" id="your-name" placeholder="Enter your name" required/>
             </fieldset>
             <fieldset>
               <label for="email" id="email-label">Email Address</label>
               <br>
-              <input type="text" id="your-email" placeholder="Enter your email" autocomplete="off" required/>
+              <input type="email" name="email" id="your-email" placeholder="Enter your email" required/>
             </fieldset>
             <fieldset>
               <label for="number" id="number-label">Phone Number (Optional)</label>
               <br>
-              <input type="tel" id="your-number" placeholder="Enter your phone number" autocomplete="off">
+              <input type="tel" name="phoneNumber" id="your-number" placeholder="Enter your phone number">
             </fieldset>
             <fieldset>
               <label for="subject" id="subject-label">Subject</label> 
               <br>
-              <select id="dropdown">
-                <option>Choose a topic</option>
-                <option>Customer Service</option>
-                <option>Technical Support</option>
-                <option>Complaints/Concerns</option>
-                <option>Other (please specify in message box)</option>
+              <select name="subject" id="dropdown" required>
+                <option value="">Choose a topic</option>
+                <option value="customer service">Customer Service</option>
+                <option value="technical support">Technical Support</option>
+                <option value="complaints/concerns">Complaints/Concerns</option>
+                <option value="other">Other (please specify in message box)</option>
               </select>
             </fieldset>
             <fieldset>

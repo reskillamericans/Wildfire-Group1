@@ -8,9 +8,13 @@ const ejsMate = require("ejs-mate");
 const viewRouter = require("./routes/viewRoutes");
 const faqRouter = require("./routes/faqRoutes");
 const subRouter = require("./routes/subscriberRoutes");
+const contactRouter = require("./routes/contactRoutes");
 const memberRouter = require("./routes/memberRoutes");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./middlewares/globalErrorHandler");
+const helmet = require("helmet");
+const mongoSanitize = require("express-mongo-sanitize");
+const xss = require("xss-clean");
 const port = process.env.PORT || 3000;
 const { seedMember } = require("./seeders/members");
 
@@ -37,8 +41,15 @@ app.use(
 );
 app.use(flash());
 
+//Security Middlewares
+app.use(helmet());
+app.use(mongoSanitize());
+app.use(xss());
+
 app.use((req, res, next) => {
+  console.log(req.query);
   res.locals.subscribed = req.flash("subscribed");
+  res.locals.contact = req.flash("contact");
   next();
 });
 
@@ -73,12 +84,17 @@ app.use("/faq", faqRouter);
 //Subscriber routes!
 app.use("/subscribers", subRouter);
 
+//Contact Us Routes
+app.use("/", contactRouter);
+
 //Member routes
 app.use("/", memberRouter);
 
 //Unhandled Routes
 app.all("*", (req, res, next) => {
-  next(new AppError(404, `Sorry the page you are looking for cannot be found.`));
+  next(
+    new AppError(404, `Sorry the page you are looking for cannot be found.`)
+  );
 });
 
 //Global Error Handler

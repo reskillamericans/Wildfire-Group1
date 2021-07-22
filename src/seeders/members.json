@@ -22,13 +22,7 @@
         
     
     },
-    {
-        "firstName": "Jennifer",
-        "lastName": "Berry",
-        "role": "Design",
-        "imageUrl": "www.pic.com"
-        
-},
+    
     {
         "firstName": "Raphaela",
         "lastName": "Han",
@@ -44,6 +38,20 @@
         
     
     },
+     {
+        "firstName": "Tiyana-Erin",
+        "lastName": "Farmbry",
+        "role": "Design",
+        "imageUrl": "www.pic.com"
+        
+},
+     {
+        "firstName": "Jennifer",
+        "lastName": "Berry",
+        "role": "Design",
+        "imageUrl": "www.pic.com"
+        
+},
     {
         "firstName": "Lauren",
         "lastName": "Smalls",

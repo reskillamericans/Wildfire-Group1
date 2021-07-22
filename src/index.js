@@ -47,7 +47,6 @@ app.use(mongoSanitize());
 app.use(xss());
 
 app.use((req, res, next) => {
-  console.log(req.query);
   res.locals.subscribed = req.flash("subscribed");
   res.locals.contact = req.flash("contact");
   next();

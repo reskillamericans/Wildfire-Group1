@@ -1,114 +1,151 @@
 <!DOCTYPE html>
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FAQ</title>
-    <link
-      rel="stylesheet"
-      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
-    />
-    <link rel="stylesheet" href="stylesheets/faq.css" />
-    <link
-      rel="shortcut icon"
-      href="images/faq/favicon.ico"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ</title>
+  <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+  <link rel="shortcut icon" href="images/faq/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="stylesheets/faq.css">
+  <!-- This link is not working -->
+  <!-- <link rel="stylesheet" type="text/css" href="/fonts/ionicons.min.css"> -->
+
+
+</head>
+<body>
+
     <div class="header">
-      <div class="navbar">
-        <a class="navbar-brand" href="/">
-          <!-- inline block align top left -->
-          <img src="images/faq/fire_logo.png" alt="" />
-          <h2 class="logo">Fire Tracker</h2>
-        </a>
-        <div menu-right class="float-right">
-          <ul class="navbar-nav">
-            <li class="dropdown">
-              <select id="language" required>
-                <option placeholder="Select your language">
-                  Select Language
-                </option>
-                <option>English</option>
-                <option>Spanish</option>
-                <option>French</option>
-                <option>Arabic</option>
-                <option>Chinese</option>
-              </select>
-            </li>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about-us">About</a>
-            </li>
-            <li>
-              <a class="active" href="/faq">FAQ</a>
-            </li>
-            <li>
-              <a href="/contact">Contact Us</a>
-            </li>
-          </ul>
+        <div class="navbar">
+            <a class="navbar-brand" href="/">
+                <!-- inline block align top left -->
+                <img src="images/faq/fire_logo.png"  alt="">
+                <h2 class="logo">Fire Tracker</h2>
+            </a>
+            <div menu-right class="float-right">
+                <ul class="navbar-nav">
+                    <li class="dropdown">
+                        <select id="language" required>
+                            <option placeholder="Select your language">Select Language</option>
+                            <option>English</option>
+                            <option>Spanish</option>
+                            <option>French</option>
+                            <option>Arabic</option>
+                            <option>Chinese</option>
+                        </select>
+                    </li>
+                    <li>
+                        <a  href="/">Home</a>
+                    </li>
+                    <li>
+                        <a  href="/about-us">About</a>
+                    </li>
+                    <li>
+                        <a class="active" href="/faq">FAQ</a>
+                    </li>
+                    <li>
+                        <a  href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
 
     <div class="container">
-      <h2>Frequently Asked Questions</h2>
 
-      <div class="search-box">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="search-box">
         <form class="form">
           <input <% if(search){ %>
 
-          value=<%= search %> 
-          <% } %> 
-          name="search" 
-          type="search"
-          placeholder="What would you like to know?" class="search-field" />
-          <button type="submit" class="search-button">
-            <img src="images/faq/search_icon.png" />
-          </button>
+            value=<%= search %> 
+            <% } %> 
+            name="search" 
+            type="search"
+            placeholder="What would you like to know?" class="search-field" />
+        <button type="submit" class="search-button">
+            <img src="images/faq/search_icon.png">
+        </button>
         </form>
-      </div>
-
-      <h3>
-        Or click on one of the questions below <br />
-        <span>
-          If your question is not found, please feel free to message us through
-          contact us.
-        </span>
-      </h3>
-
-      <div class="accordion" id="updatedContent">
-        <!-- Display message if there are no serach results -->
-        <% if(faqs.length === 0) {%> 
-          <h3>No questions found with that search...</h3>
-          <% } %> 
-        <!-- Display message if there no FAQs in the Database-->
-        <% if(!faqs) {%> 
-          <h3>Nothing here</h3>
-          <% } %> 
-          <!-- Render Acordian Item -->
-        <% faqs.map((faq, idx) =>{ %>
-        <div
-          class="accordion-item <% if(faqs.length-1 === idx){ %> border <% } %>"
-        >
-          <a> <%= faq.question %> </a>
-          <div class="content">
-            <p><%= faq.answer %></p>
-          </div>
-        </div>
-
-        <%}) %>
-      </div>
     </div>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
-    <script src="javascripts/function.js"></script>
-    <script src="javascripts/searchFunctions.js"></script>
-    
-  </body>
-</html>
+    <h3>Or click on one of the questions below <br> <span> If your question is not found, please feel free to message us through contact us. </span> </h3>
 
+    <div class="accordion" id="updatedContent">
+       <!-- Display message if there are no serach results -->
+       <% if(faqs.length === 0) {%> 
+        <h3>No questions found with that search...</h3>
+        <% } %> 
+      <!-- Display message if there no FAQs in the Database-->
+      <% if(!faqs) {%> 
+        <h3>Nothing here</h3>
+        <% } %> 
+        <!-- Render Acordian Item -->
+      <% faqs.map((faq, idx) =>{ %>
+      <div
+        class="accordion-item <% if(faqs.length-1 === idx){ %> border <% } %>"
+      >
+        <a> <%= faq.question %> </a>
+        <div class="content">
+          <p><%= faq.answer %></p>
+        </div>
+      </div>
+
+      <%}) %>
+    </div>
+    </div>
+
+    <!-- footer -->
+    <section class="last-section">
+        <footer>
+            <div class="footer-container">
+              <div class="left-panel">
+                <h5 class=" subscribe">Subscribe</h5>
+              
+                <div class="subscribe-email">
+                  <form action="/subscribers" method="POST">
+                    <input name="email" class="email-border" type="text" id="newsletter-email" placeholder="Email Address" autocapitalize="off">
+                    <button id="subscribe-btn" type="submit">Subscribe</button>
+                  </form>
+                  <p class="newsletter">I would like to receive communcations about Fire Tracker app services.</p>
+                </div>
+              </div>
+              <div class="right-panel">
+                <div class="social-icons">
+                    
+                  <a class="facebook" href="https://www.facebook.com"> 
+                    <svg >
+                    <use href="images/faq/facebook.svg#facebook"></use>
+                    </svg> 
+                </a>
+
+                <a class="twitter" href="https://www.instagram.com"> 
+                    <svg >
+                    <use href="images/faq/instagram.svg#instagram"></use>
+                    </svg> 
+                </a>
+
+                <a class="twitter" href="https://www.twitter.com"> 
+                    <svg >
+                    <use href="images/faq/twitter.svg#twitter"></use>
+                    </svg> 
+                </a>
+                </div>
+
+                <div class="fire-contact">
+                  <p class="fire-number">Phone: 1.800.123.4567 | Email: contact@firetracker.com</p>
+                  <p class="privacy-info">Privacy. Terms. &copy; Copyright 2021 Reskill</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </section>    
+    
+    
+
+    <script  src="javascripts/function.js"></script>
+    <script src="javascripts/searchFunctions.js"></script>
+
+</body>
+</html>

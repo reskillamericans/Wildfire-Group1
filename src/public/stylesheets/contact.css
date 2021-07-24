@@ -19,13 +19,21 @@
     box-sizing: inherit;   
 }
 
+html {
+    height: 100%; /*added the height to eliminate the white space under the footer*/
+    width: 100%;
+}
+
 body {
-    min-height: 100vh;
-    margin: 0;
+    min-height: 100%; /*changed from 100vh to 100% to eliminate white space under footer*/
+
+    flex-direction: column; /*added to eliminate white space under footer*/
+    margin: 0em;
     padding: 0;
     background-color: var(--white);
-    position: relative;
-    
+    position: relative; /*changed*/
+    overflow-x: hidden;
+    overflow-y: scroll;   
 }
 
 /* navbar */
@@ -53,7 +61,9 @@ body {
     text-align: center;
     padding: 16px 0x;
     text-decoration: none;
-    display: inline-flex;
+    display: -webkit inline-box; /*added*/
+    display: -ms inline-flexbox; /*added*/
+    display: inline-flex; /*added*/
     margin-right: 2.5rem;
     font-weight: 700;
     font-size: .9rem;
@@ -76,6 +86,7 @@ body {
   .navbar a:hover {
     color: #FF624D;
   }
+
   
 .navbar-brand img {
     display: inline-block;
@@ -103,6 +114,7 @@ body {
 }
 
 .dropdown {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-right: 3.5rem;
     font: 'Open Sans';
@@ -126,12 +138,14 @@ body {
     display: block;
     justify-content: center;
     align-items: center;
-    margin: 150px; 
+    margin: 7em auto; /*changed margin sizes*/
+    width: 60%; /*added*/
    
 }
 
 fieldset {
     border: none;  
+    margin: 1em 0em; /*added*/
 }
 
 .main-header {
@@ -143,33 +157,43 @@ fieldset {
 
  input {
     width: 100%;
-    height: 30px;
+    height: 40px; /*decreased the height of input*/
     border: 1px solid var(--verylightgray);
-    border-radius: 4px;
     background-color: var(--verylightgray);
+    
 }
 
 select {
     background-color: var(--verylightgray);
+    box-sizing: content-box; /*added*/
 }
 
 
 #name-label, #email-label, #number-label, #subject-label, #message-label {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 16px; /*remained the same size*/
     line-height: 40px;
     font-weight: bold;
     letter-spacing: 0.07em;
     color: #180126;
 }
 
+#message-label:placeholder-shown {
+     font-family: 'Open Sans', sans-serif;
+    font-weight:normal;
+    letter-spacing:normal;
+    font-size: 14px;
+    color: #180126;
+   
+}
+
 #dropdown {
-    width: 100%;
-    height: 30px;
+    width: 100%; /*sligh increase to the width to match input*/
+    height: 40px; /*decreased the height*/
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
-    color: var(--gray);
-    
+    color: var(--gray); 
+    box-sizing: content-box; /*added*/
 }
 
 option {
@@ -187,15 +211,15 @@ option {
 }
 
 textarea {
-    width: 100%;
-    height: 200px;
-    padding: 12px 20px;
-    box-sizing: border-box;
+    width: 100%; /*changed width to 100%*/
+    box-sizing: content-box; /*added*/
+    height: 320px; /*decreased the height*/
     border: 1px solid var(--verylightgray);
     border-radius: 4px;
     font-size: 16px;
     resize: none;
     background-color: var(--verylightgray);
+   
 }
 
 #submit-btn {
@@ -210,6 +234,7 @@ textarea {
     height: 40px; 
     border: none;
     margin-top: 0px;
+    cursor: pointer; /*added*/
 }
 
 #submit-btn:hover {
@@ -226,27 +251,35 @@ button:hover {
 .button:active {
     background-color: var(--white);
     color: var(--orange);
-    transform: translateY(4px);
-    
+    transform: translateY(4px); 
+    cursor: pointer;   
 }
 
 
 /*----updated footer-------- */
+
 footer{ 
     background-color:var(--offwhite);
-    border-top: 1px solid var(--verylightgray);
+    border-top: 1px solid var(--lightgray);
     font-family: 'Open Sans', sans-serif;
+    margin-top:3em;
 }
 
 .footer-container{ 
     display: flex;
     justify-content: center;
-    padding: 1em;
+    padding-left: 2em;
+    padding-right:2em;
 }
 
 .subscribe{ 
     font-size: 21px;
     font-weight: 400;
+
+}
+
+.subscribe-email{ 
+    margin-top:-25px;
 }
 
 .newsletter,.subscribe{ 
@@ -260,7 +293,7 @@ footer{
     border-bottom: 1px solid var(--gray);
     background-color: var(--offwhite);
     width: 50%;
-    color: var(--verylightgray);
+    color: var(--very-light-gray);
     letter-spacing: -0.2px;  
 }
 
@@ -275,7 +308,10 @@ button{
     color: var(--white);
     padding: 5px; 
     width: 120px;
-    margin: 5px;
+    margin:5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+   
+
 }
 
 button:hover{ 
@@ -286,19 +322,24 @@ button:hover{
 
 .right-panel{ 
     margin-top: 2em;
-    padding-left: 15px;
+    flex-basis:50%;
 }
 
-.right-panel p{ 
+.left-panel{ 
+    flex-basis:50%;
+}
+
+
+.right-panel { 
     text-align: right;
     color: var(--gray);
 }
 
-.social-icons{ 
-   
-    display:flex;
-    justify-content:flex-end;
-}
+
+
+.social-icons{
+    margin-bottom:30px;
+ }
 
 .social-icons a{ 
     background-color: var(--orange);
@@ -306,12 +347,12 @@ button:hover{
     border-radius: 50%;
     color: white;
     margin-right: 5px;
-}
-
-.social-icons a{ 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     padding-left: 15px;
     padding-right: 15px;
+    
 }
+
 
 .social-icons a:hover{ 
     background-color: var(--white);
@@ -319,14 +360,7 @@ button:hover{
     border: 2px solid var(--orange);
 }
 
-
-/* media queries */
-@media(max-width: 1057px) {
-    body {
-        padding-top: 4em;
-    }
-}
-
+/*updated media queries*/
 @media(max-width: 768px) {
     .float-right {
         float: none;
@@ -344,7 +378,7 @@ button:hover{
     }
 
     .dropdown {
-        margin-left: 25rem;
+        margin-left: .25rem;
     }
         
      .container {
@@ -361,7 +395,7 @@ button:hover{
        text-align: center;
    }
 
-   .fototer-caontainer p {
+   .footer-container p {
        font-size: 12px;
    }
 
@@ -370,18 +404,40 @@ button:hover{
    }
 
    .social-icons {
-       justify-content: center;
+      text-align: center;
    }
 
+   .right-panel p {
+    text-align: center;
+}
 
-    .right-panel p {
-        text-align: center;
+   .navbar a:hover {
+    color: #FF624D;
+  }
+
+  /*---added to make header & footer responsive----*/
+    #submit-btn:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
     }
+    
+    button:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
+    }
+    .button:active {
+        background-color: var(--white);
+        color: var(--orange);
+        transform: translateY(4px);    
+    }
+
 }
 
 @media (max-width: 677px) {
     body {
-        padding-top: 3em;
+       padding-top: 3em; /*added*/
     }
 
     .dropdown {
@@ -406,47 +462,207 @@ button:hover{
         margin-top: 2.5rem;
         margin-bottom: 0rem;
     }
-    @media(max-width:470px){ 
+    
+    /*remove
+    .main-header {
+        margin-top: -50px;
+    }*/
 
+    .container {
+        width: 95%; /*changed width*/
+        position: relative;
+        
+    }
+
+    #name-label, #email-label, #number-label, #subject-label, #message-label {
+        font-size: 16px;
+    }
+
+      
+    .subheading {
+        font-size: 15px;
+    }
+
+    .email-border {
+        padding: 0px;
+    }
+
+    fieldset {
+        margin: 1em 0em; /*added*/
+    }
+
+    #dropdown {
+        width: 100%; /*added*/
+    }
+    textarea {
+        height: 430px;
+        width: 100%; /*added*/
+    }
+
+    #submit-btn {
+        width: 50%;
+    }
+
+    .navbar a:hover {
+        color: #FF624D;
+      }
+
+  /*---added to make header & footer responsive----*/
+
+      #submit-btn:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
+    }
+    
+    button:hover {
+        background-color: var(--white);
+        color: var(--orange);
+        border: 2px solid var(--orange);
+    }
+    .button:active {
+        background-color: var(--white);
+        color: var(--orange);
+        transform: translateY(4px);    
+    }
+
+
+
+    /*----media queries for smart phones-----*/
+    @media(max-width:470px){ 
+        
         #language {
             padding: .2rem; 
         }
             
-        
         .navbar a { 
             padding: 0rem;
             margin: .15rem;
             
         }
         
-        
         .navbar-nav {
             padding: 0;
             margin: .2rem;
-        
+            display: flex;
+            justify-content: space-around;
         }
         
    
         h2 {
-            font-size: 1.2rem;
-                
+            font-size: 1.2rem;     
         }
+
+        fieldset {
+            margin: 1em 0em; /*added*/
+        }
+
+        textarea {
+            height: 430px; /*added*/
+        }
+
+        footer {
+            background-color: var(--offwhite);
+            margin-top: auto;
+            margin-right: -60px; /*added to make footer fit on the screen*/
+        }
+    
+          /*---added to make header & footer responsive----*/
+
+        .navbar a:hover {
+            color: #FF624D;
+          }
+
+        
+          #submit-btn:hover {
+            background-color: var(--white);
+            color: var(--orange);
+            border: 2px solid var(--orange);
         }
         
-        @media(max-width:400px){ 
-        
-        .navbar a { 
-            padding-left: .35rem;
-            font-size: .75rem;
+        button:hover {
+            background-color: var(--white);
+            color: var(--orange);
+            border: 2px solid var(--orange);
         }
-        
-        .dropdown {
-            font-size: .75rem;
-        
+        .button:active {
+            background-color: var(--white);
+            color: var(--orange);
+            transform: translateY(4px);    
         }
-        
-        #language {
-            font-size: .75rem;
-            }
-        }
+
     }
+}
+       
+    @media(max-width:400px) {
+
+            .navbar a { 
+                padding-left: .35rem;
+                font-size: .75rem;
+            }
+            
+            .dropdown {
+                font-size: .75rem;
+            }
+            
+            #language {
+                font-size: .75rem;
+                }
+
+                .container{ 
+                    margin:7em 2em;
+                }
+
+                textarea {
+                    height: 430px; /*added*/
+            
+                }
+
+                #message-label:placeholder-shown{ 
+                    font-size:18px;
+                }
+
+                #name-label, #email-label, #number-label, #subject-label, #message-label{ 
+                    font-size:20px;
+                }
+
+                #submit-btn {
+                    width: 80%;
+                    margin-left:2.3em;
+                    float:none;
+                }
+
+                form input, #dropdown{ 
+                    height:60px;
+                    font-size:18px;
+                }
+
+
+
+                
+        /*---added to make header & footer responsive----*/
+
+                .navbar a:hover {
+                    color: #FF624D;
+                  }
+            
+                  #submit-btn:hover {
+                    background-color: var(--white);
+                    color: var(--orange);
+                    border: 2px solid var(--orange);
+                }
+                
+                button:hover {
+                    background-color: var(--white);
+                    color: var(--orange);
+                    border: 2px solid var(--orange);
+                }
+
+                .button:active {
+                    background-color: var(--white);
+                    color: var(--orange);
+                    transform: translateY(4px);    
+                }
+
+            }
+    

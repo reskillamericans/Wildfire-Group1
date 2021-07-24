@@ -162,18 +162,19 @@ main{
 }
 
 .story{ 
-    max-width:640px;
+    max-width:529px;
     text-align:center;
     margin:0 auto;
     padding:2em;
 }  
 
-.story h1{ 
+/*.story h1{ 
     margin-bottom:1em; 
-}
+}*/
 
 .story p{ 
     color:var(--dark-gray);
+    
 }
 
 .team-info{ 
@@ -181,6 +182,7 @@ main{
    justify-content:center;
    justify-items:center;
    padding:1em;
+   color:var(--dark-gray);
     
 }
 
@@ -197,7 +199,7 @@ table{
     max-height:600px;
 }
 
-th{ 
+tbody th{ 
     padding-right:5em;
     text-align:right;
 }
@@ -206,27 +208,35 @@ td{
     padding:10px;
 }
 
-.table-header{ 
-  
+thead th{ 
     text-align:center;
-    padding-bottom:1em; /*remember you have to use padding since its a table*/  
-    
-} 
+    font-size:larger;
+}
+
 /*----------------footer--------------*/
+
 footer{ 
     background-color:var(--offwhite);
-    border-top:1px solid var(--light-gray);
+    border-top: 1px solid var(--very-light-gray);
+    font-family: 'Open Sans', sans-serif;
+    margin-top:3em;
 }
 
 .footer-container{ 
-    display:flex;
-    justify-content:center;
-    padding:1em;
+    display: flex;
+    justify-content: center;
+    padding-left: 2em;
+    padding-right:2em;
 }
 
 .subscribe{ 
-    font-size:21px;
-    font-weight:400;
+    font-size: 21px;
+    font-weight: 400;
+
+}
+
+.subscribe-email{ 
+    margin-top:-25px;
 }
 
 .newsletter,.subscribe{ 
@@ -245,59 +255,66 @@ footer{
 }
 
 #newletter-email:hover{ 
-    border:2px solid var(--orange);
+    border: 2px solid var(--orange);
 }
 
-
 button{ 
-    background-color:var(--orange);
-    border:none; 
-    border-radius:5px; 
-    color:var(--white);
-    padding:5px; 
-    width:120px;
-    margin:5px;
+    background-color: var(--orange);
+    border: none; 
+    border-radius: 5px; 
+    color: var(--white);
+    padding: 5px; 
+    width: 120px;
+    margin: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+   
+
 }
 
 button:hover{ 
-    color:var(--orange); 
-    background-color:var(--white);
-    border:2px solid var(--orange);
+    color: var(--orange); 
+    background-color: var(--white);
+    border: 2px solid var(--orange);
 }
 
 .right-panel{ 
-    margin-top:2em;
-    padding-left:15px;
+    margin-top: 2em;
+    flex-basis:50%;
 }
 
-.right-panel p{ 
-    text-align:right;
-    color:var(--dark-gray);
+.left-panel{ 
+    flex-basis:50%;
 }
 
-.social-icons{ 
-   
-    display:flex;
-    justify-content:flex-end;
+
+.right-panel { 
+    text-align: right;
+    color: var(--dark-gray);
 }
 
-.social-icons a{ 
-    background-color:var(--orange);
-    padding:10px;
-    border-radius:50%;
-    color:white;
-    margin-right:5px;
-}
+
+
+.social-icons{
+    margin-bottom:30px;
+ }
 
 .social-icons a{ 
-    padding-left:15px;
-    padding-right:15px;
+    background-color: var(--orange);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    margin-right: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    padding-left: 15px;
+    padding-right: 15px;
+    
 }
+
 
 .social-icons a:hover{ 
-    background-color:var(--white);
-    color:var(--orange);
-    border:2px solid var(--orange);
+    background-color: var(--white);
+    color: var(--orange);
+    border: 2px solid var(--orange);
 }
 
 
@@ -383,7 +400,7 @@ footer{
 }
 
 .social-icons{ 
-    justify-content:center;
+    text-align:center;
 }
 
 .right-panel p{ 
@@ -486,6 +503,11 @@ h2 {
     font-size: 1.2rem;
         
 }
+
+tbody th{ 
+    padding-right:1.5em;
+}
+
 }
 
 

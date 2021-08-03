@@ -367,7 +367,7 @@ button{
 
 }
 
-button:hover{ 
+#subscribe-btn:hover{ 
     color: #FF624C; 
     background-color: #FFFFFF;
     border: 2px solid #FF624C; 
